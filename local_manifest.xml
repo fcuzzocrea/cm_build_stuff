@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" >
+  <project name="fcuzzocrea/cm_build_stuff" path="fcuzzocrea" remote="github" >
     <linkfile src="picks.sh" dest="picks.sh" />
-    <!-- repo update broke these
-    <linkfile src="000_remotes.xml" dest=".repo/local_manifests/000_remotes.xml" />
-    <linkfile src="local_manifest.xml" dest=".repo/local_manifests/z00_local_manifest.xml" />
-    <linkfile src="local_devices.xml" dest=".repo/local_manifests/z01_local_devices.xml" />
-    <linkfile src="vendor.xml" dest=".repo/local_manifests/z02_vendor.xml" />
-    -->
   </project>
 
-  <!-- LineageOS Infrastructure Stuff -->
+  <!-- DEVICES -->
 
-  <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="master" />
-  <project name="LineageOS/infra/gerrit-config" path="lineage/infra/gerrit-config" remote="gitlab" revision="master" />
+  <project name="8890q/android_device_samsung_hero2lte" path="device/samsung/hero2lte" revision="lineage-17.1" remote="github"/>
+  <project name="8890q/android_device_samsung_herolte" path="device/samsung/herolte" revision="lineage-17.1" remote="github"/>
+  <project name="8890q/android_device_samsung_universal8890-common" path="device/samsung/universal8890-common" revision="lineage-17.1" remote="github"/>
+  <project name="8890q/android_kernel_samsung_universal8890" path="kernel/samsung/universal8890" revision="lineage-17.1" remote="github"/>
 
 </manifest>
