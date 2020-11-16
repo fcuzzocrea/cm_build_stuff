@@ -16,6 +16,10 @@ source build/envsetup.sh
 
 # -------------- DEVICE STUFF --------------
 
+# device/qcom/sepolicy-legacy
+repopick 292386 -P device/qcom/sepolicy-legacy # sepolicy: Switch to BOARD_VENDOR_SEPOLICY_DIRS
+repopick 292387 -P device/qcom/sepolicy-legacy # mediacodec_service was removed
+repopick 292765 -p device/qcom/sepolicy-legacy # sepolicy: uce service is moved to system side.
 
 # -------------- PLATFORM STUFF --------------
 
@@ -62,6 +66,9 @@ repopick 292363 # Switch button brightness from int to float
 # system/core
 repopick 289133 # core: Add back support for legacy adbd
 
+# system/sepolicy
+repopick 292244 # Fix storaged access to /sys/block/mmcblk0/stat after 48027a00
+
 # vendor/lineage
 repopick 289841 # soong: add TARGET_HAS_MEMFD_BACKPORT conditional
 repopick 292258 # soong: Make QCOM legacy variable name more generic
@@ -71,6 +78,7 @@ repopick 291988 # qcom: Enable TARGET_USES_QCOM_BSP_LEGACY for B family
 
 repopick -t eleven-samsung-thermal
 repopick -t eleven-legacy-bt
+repopick -t eleven-legacy-camera
 repopick -t eleven-s3ve3g
 
 exit 0
