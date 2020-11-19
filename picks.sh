@@ -19,7 +19,7 @@ source build/envsetup.sh
 # device/qcom/sepolicy-legacy
 repopick 292386 -P device/qcom/sepolicy-legacy # sepolicy: Switch to BOARD_VENDOR_SEPOLICY_DIRS
 repopick 292387 -P device/qcom/sepolicy-legacy # mediacodec_service was removed
-repopick 292765 -p device/qcom/sepolicy-legacy # sepolicy: uce service is moved to system side.
+repopick 292765 -P device/qcom/sepolicy-legacy # sepolicy: uce service is moved to system side.
 
 # -------------- PLATFORM STUFF --------------
 
@@ -31,43 +31,54 @@ repopick 286304 # bionic: Sort and cache hosts file data for fast lookup
 repopick 286305 # bionic: Support wildcards in cached hosts file
 
 # bootable/recovery
-repopick -f 286351 -P bootable/recovery # init: update recovery when enabled in settings
+repopick 288978 -P bootable/recovery # recovery: make /etc/fstab only include entries that match the detected fs type
+repopick 289883 -P bootable/recovery # recovery: Don't print mount errors when checking for encryption
+repopick 289884 -P bootable/recovery # recovery: Hide unmountable volumes from selection
+repopick 289885 -P bootable/recovery # recovery: Implement a volume manager
+
+# external/e2fsprogs
+repopick 289446 -P external/e2fsprogs # Mark libext2_blkid as vendor available
+
+# external/gptfdisk
+repopick 289917 -P external/gptfdisk # gptfdisk: include gptcl.h after sgdisk.h
+repopick 289918 -P external/gptfdisk # gptfdisk: Provide sgdisk_read for direct reads of the partition table
+repopick 289919 -P external/gptfdisk # gptfdisk: Build lib for recovery
 
 # external/perfetto
 repopick 287706 -P external/perfetto # perfetto: Conditionally remove version check for memfd_create()
 
 # frameworks/base
 repopick 291141 # Keyguard: Allow disabling fingerprint wake-and-unlock
-repopick 292107 # sensors: Create bool to select what timestamp to use
+
+# frameworks/av
+repopick 292990 # Enable legacy adaptive playback for QCOM_BSP_LEGACY
 
 # frameworks/native
 repopick 291971 # SurfaceFlinger: Don't cleanup resource from previous frame
 
 # hardware/lineage/interfaces
-# repopick 287659 # interfaces: Camera: add IAllocator/IMapper 4.0 to camera HIDL
 repopick 287660 # interfaces: camera: fix two potential null pointer uses
 repopick 287661 # interfaces: camera: Implement lockYCbCr stub for Mapper 4.0
-repopick 287666 # Wifi: Uprev Wifi HAL to 1.4
-repopick 287667 # Wifi: Add 802.11ax support to RTT
-repopick 287668 # Wifi: Support check on device capability for 6GHZ
-repopick 287669 # Wifi: Add 6GHz bands to WifiBand
-repopick 287670 # Wifi: Add 6GHz band to NAN structures and methods
-repopick 287671 # Remove 6GHz capability query through HAL
-repopick 287672 # Fix 6GHz support for NAN
-repopick 287673 # wifi: Convert LazyServiceRegistrar usage to singleton
 
 # hardware/samsung
 repopick 256236 # Audio: Fix Ringtone Playing Through The Speaker
 repopick 256236 # samsung: AdvancedDisplay: Migrate to androidx
 
-# packages/apps/SetupWizard
-repopick 292363 # Switch button brightness from int to float
+# packages/apps/SetupWizard - To avoid conflict with eleven-recovery-update
+repopick 292974 # SetupWizard: Add seedvault restore page in GMS flow
 
 # system/core
-repopick 289133 # core: Add back support for legacy adbd
+repopick 292788 # core: Bring back support for legacy FunctionFS
+repopick 288979 # fs_mgr: autodetect filesystem type
+repopick 289914 # core: mark libsysutils and libdiskconfig recovery_available
 
 # system/sepolicy
 repopick 292244 # Fix storaged access to /sys/block/mmcblk0/stat after 48027a00
+repopick 292766 # sepolicy: Treat proc-based DT fstab the same and sys-based
+repopick 292767 # Allow init to write to /proc/cpu/alignment
+
+# system/netd
+repopick 289818 -P system/netd # netd: Allow devices to force-add directly-connected routes
 
 # vendor/lineage
 repopick 289841 # soong: add TARGET_HAS_MEMFD_BACKPORT conditional
@@ -79,6 +90,8 @@ repopick 291988 # qcom: Enable TARGET_USES_QCOM_BSP_LEGACY for B family
 repopick -t eleven-samsung-thermal
 repopick -t eleven-legacy-bt
 repopick -t eleven-legacy-camera
-repopick -t eleven-s3ve3g
+repopick -t eleven-recovery-update
+repopick -t eleven-db-migration
+repopick -t eleven-scudo-free-libc32
 
 exit 0
