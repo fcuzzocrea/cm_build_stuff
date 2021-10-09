@@ -15,58 +15,52 @@ function checkchain() {
 source build/envsetup.sh
 
 # -------------- DEVICE STUFF --------------
-# device/samsung/msm8226-common
-repopick 292140 # msm8226-common: enable TARGET_HAS_MEMFD_BACKPORT
 
-# device/samsung/s3ve3g-common
-repopick 292866 # s3ve3g-common: wifi: Move wifi related overlays to new location
-repopick 292942 # s3ve3g-common: overlay: Disable wifi AP MAC randomization
-repopick 292867 # s3ve3g-common: overlay: Move tethering overlays
-repopick 292154 # s3ve3g-common: overlay: Disable BPF offload for tethering
-repopick 295438 # s3ve3g-common: overlay: p2p: add p2p regex for tethering modes
+# device/lineage/sepolicy
+repopick -f -P device/lineage/sepolicy 307258 # lineage: Kill policy incompatibily with GSI for some OEMs
+
+# device/samsung/universal5420-common
+repopick -g https://review.exynos5420.com 7783 # [DNM] universal5420: dont build touch hal for now
+
+# device/samsung/klimt-common
+repopick -g https://review.exynos5420.com 7791 # [DNM] klimt: remove touch hal for now
+
+# device/samsung/klimtlte
+repopick -g https://review.exynos5420.com 7796 # [DNM]: klimtlte: fake recovery size for now
+
+# device/samsung/universal8890-common
+repopick 302917 # Revert "Revert "universal8890: add common BSP flags""
+repopick 302918 # Revert "Revert "universal8890: Add gralloc header""
+repopick 302919 # Revert "Revert "universal8890: Update gralloc header""
+repopick 302920 # Revert "Revert "universal8890: update gralloc header for R""
+repopick 302921 # Revert "Revert "universal8890: build hwcomposer and memtrack hals from source""
+repopick 302922 # Revert "Revert "universal8890: support for building without the BSP""
+
+# kernel/samsung/exynos5420
+repopick -g https://review.exynos5420.com 8392 # klimtlte: Kill all possible debugging
+repopick -g https://review.exynos5420.com 7888 # klimtlte: build enforcing kernel by default
 
 # -------------- PLATFORM STUFF --------------
 
-# art
-repopick 286185 -P art # art: Conditionally remove version check for memfd_create()
-
-# build
+# build/make
 repopick 288657 # Sorry bro: 6 -> 3
-repopick 294263 # Remove unused locale data for recovery
 
-# external/perfetto
-repopick 287706 -P external/perfetto # perfetto: Conditionally remove version check for memfd_create()
+# build/soong
+repopick 311549 # Add dumpvars for WITH_EXYNOS_BSP
 
 # frameworks/base
-repopick 291141 # Keyguard: Allow disabling fingerprint wake-and-unlock
+repopick 312889 #[1/3] SystemUI: add burnIn protection setting
+repopick 310556 # KeyStore: Block key attestation for Google Play Services
 
-# frameworks/native
-repopick 289755 # input: Adjust priority
+# packages/app/LineageParts
+repopick -f -P packages/app/LineageParts 316725 # Parts: add package for res
 
-# hardware/samsung
-repopick 256236 # Audio: Fix Ringtone Playing Through The Speaker
-repopick 256236 # samsung: AdvancedDisplay: Migrate to androidx
-
-# packages/apps/SetupWizard - To avoid conflict with eleven-recovery-update
-repopick 292974 # SetupWizard: Add seedvault restore page in GMS flow
-
-# system/core
-repopick 292788 # core: Bring back support for legacy FunctionFS
-
-# system/sepolicy
-repopick 292244 # Fix storaged access to /sys/block/mmcblk0/stat after 48027a00
-repopick 292766 # sepolicy: Treat proc-based DT fstab the same and sys-based
-repopick 292767 # Allow init to write to /proc/cpu/alignment
-repopick 292244 # Fix storaged access to /sys/block/mmcblk0/stat after 48027a00
-
-# system/netd
-repopick 289818 -P system/netd # netd: Allow devices to force-add directly-connected routes
-
-# vendor/lineage
-repopick 289841 # soong: add TARGET_HAS_MEMFD_BACKPORT conditional
+## vendor/lineage
+repopick -f 289513 # lineage: Moar fontz
+repopick -f 289514 # lineage: Update default wallpaper for 18.1
 
 # -------------- TOPIC STUFF --------------
 
-repopick -t eleven-samsung-thermal
+repopick -t eleven-firewall
 
 exit 0
