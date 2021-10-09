@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/lge" remote="github" />
-  <project name="8890q/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
-  <project name="TheMuppets/manifests" path="vendor/TheMuppets" remote="github" />
+  <project name="TheMuppets/proprietary_vendor_essential" path="vendor/lge" remote="github" />
+  <project name="fcuzzocrea/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
 
 </manifest>

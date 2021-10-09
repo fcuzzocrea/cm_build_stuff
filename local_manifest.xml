@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="fcuzzocrea/cm_build_stuff" path="fcuzzocrea" remote="github" >
+  <project name="fcuzzocrea/lineage_build_stuff" path="lineage_build_stuff" remote="github">
     <linkfile src="picks.sh" dest="picks.sh" />
   </project>
 
-  <!-- DEVICES -->
+  <!-- klimt -->
+  <project name="LineageOS/android_hardware_samsung_slsi_exynos" path="hardware/samsung_slsi/exynos" remote="github" />
+  <project name="LineageOS/android_hardware_samsung_slsi_exynos5" path="hardware/samsung_slsi/exynos5" remote="github" />
+  <project name="LineageOS/android_hardware_samsung_slsi_openmax" path="hardware/samsung_slsi/openmax" remote="github" />
+  <project name="exynos5420/android_device_samsung_klimtlte" path="device/samsung/klimtlte" remote="github" />
+  <project name="exynos5420/android_device_samsung_klimtwifi" path="device/samsung/klimtwifi" remote="github" />
+  <project name="exynos5420/android_device_samsung_klimt-common" path="device/samsung/klimt-common" remote="github" />
+  <project name="exynos5420/android_device_samsung_universal5420-common" path="device/samsung/universal5420-common" remote="github" />
+  <project name="exynos5420/android_hardware_samsung_slsi_exynos5420" path="hardware/samsung_slsi/exynos5420" remote="github" />
+  <project name="exynos5420/android_kernel_samsung_exynos5420" path="kernel/samsung/exynos5420" remote="github" />
+  <project name="exynos5420/android_vendor_samsung_klimtlte" path="vendor/samsung/klimtlte" remote="github" />
+  <project name="exynos5420/android_vendor_samsung_klimtwifi" path="vendor/samsung/klimtwifi" remote="github" />
+  <project name="exynos5420/android_vendor_samsung_klimt-common" path="vendor/samsung/klimt-common" remote="github" />
+  <project name="exynos5420/android_vendor_samsung_universal5420-common" path="vendor/samsung/universal5420-common" remote="github" />
 
-  <project name="8890q/android_device_samsung_hero2lte" path="device/samsung/hero2lte" revision="lineage-17.1" remote="github"/>
-  <project name="8890q/android_device_samsung_herolte" path="device/samsung/herolte" revision="lineage-17.1" remote="github"/>
-  <project name="8890q/android_device_samsung_universal8890-common" path="device/samsung/universal8890-common" revision="lineage-17.1" remote="github"/>
-  <project name="8890q/android_kernel_samsung_universal8890" path="kernel/samsung/universal8890" revision="lineage-17.1" remote="github"/>
-
+  <!-- Personal Stuff -->
+  <project name="luk1337/ih8sn" path="external/ih8sn" revision="master" />
+  <project name="npjohnson/android_packages_apps_Launcher3" path="packages/apps/Launcher3" />
+  <project name="fcuzzocrea/android_vendor_extra" path="vendor/extra" />
+  <project name="fcuzzocrea/android_vendor_google_pixel" path="vendor/google_pixel" />
 </manifest>
