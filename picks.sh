@@ -49,8 +49,9 @@ repopick 288657 # Sorry bro: 6 -> 3
 repopick 311549 # Add dumpvars for WITH_EXYNOS_BSP
 
 # frameworks/base
-repopick 312889 #[1/3] SystemUI: add burnIn protection setting
+repopick 312889 # [1/3] SystemUI: add burnIn protection setting
 repopick 310556 # KeyStore: Block key attestation for Google Play Services
+repopick 319635 # frameworks: delay rotation acceptability when screen just turned on.
 
 # packages/app/LineageParts
 repopick -f -P packages/app/LineageParts 316725 # Parts: add package for res
