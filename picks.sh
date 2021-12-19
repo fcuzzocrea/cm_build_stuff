@@ -128,11 +128,6 @@ repopick 318822 # SystemUI: fix clock dark/light mode switching
 repopick 318804 # SystemUI: Add Lineage statusbar item holder
 repopick 318805 # SystemUI: Network Traffic [1/3]
 repopick 317786 # monet: Add support for monet (cam16)
-repopick 318806 # SystemUI: add left and right virtual buttons while typing
-repopick 318972 # SystemUI: Add navbar layout inversion tuning
-repopick 318973 # SystemUI: Implement hide gestural navigation hint bar [1/5]
-repopick 318715 # SystemUI: AuthController: Fix ripple animation for side fp devices
-repopick 318716 # SystemUI: SidefpsController: Use location from resources
 repopick 318355 # SystemUI: Expose legacy Wi-Fi and cellular data QS tiles
 repopick 318356 # SystemUI: Allow Wi-Fi/cell tiles to co-exist with provider model
 repopick 320419 # Revert "[DO NOT MERGE] Make sure WiFi and Cell tiles are not created in Provider Model"
@@ -159,7 +154,6 @@ repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps 
 
 # packages/apps/Settings
 repopick 319490 # Migrate from network isolation to restricted networking mode
-repopick 320504 # Settings: Implement hide gestural navigation hint bar [2/5]
 repopick 318021 # Settings: default to GlifV3Theme
 repopick 318022 # Settings: use Glif themed button bar
 repopick 318023 # Settings: Network setup UI changes for SUW
