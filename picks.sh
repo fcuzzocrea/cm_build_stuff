@@ -133,6 +133,8 @@ repopick 318356 # SystemUI: Allow Wi-Fi/cell tiles to co-exist with provider mod
 repopick 320419 # Revert "[DO NOT MERGE] Make sure WiFi and Cell tiles are not created in Provider Model"
 repopick 318458 # SystemUI: Use AVCProfileMain for screen recorder
 repopick 318459 # Fix bug Device that can't support adoptable storage cannot read the sdcard.
+repopick 320710 # Squashed import of adb root patches
+repopick 320714 # SystemUI: add burnIn protection
 
 # hardware/samsung
 repopick 318107 # Specify version for aidl_interface explicitly
@@ -157,6 +159,10 @@ repopick 319490 # Migrate from network isolation to restricted networking mode
 repopick 318021 # Settings: default to GlifV3Theme
 repopick 318022 # Settings: use Glif themed button bar
 repopick 318023 # Settings: Network setup UI changes for SUW
+repopick 320711 # Add toggle to enable ADB root
+
+# packages/modules/adb
+repopick 320713 # Squashed import of adb root patches
 
 # packages/apps/ThemePicker
 repopick -f 317574 # ThemePicker: Grant missing wallpaper permissions
@@ -185,5 +191,6 @@ repopick -f 318085 # lineage: Update default wallpaper for 19.0
 # -------------- TOPIC STUFF --------------
 # still needs to be ported
 # repopick -t eleven-fastcharge
+# repopick -t eleven-button-lights
 
 exit 0
