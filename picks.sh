@@ -150,6 +150,8 @@ repopick 319623 # fingerprint: implement gestures
 repopick 319921 # samsung: add secril_config_svc
 repopick 319360 # mkbootimg: Update for S
 repopick 319399 # doze: Adapt to S style
+repopick 320716 # AdvancedDisplay: Adapt to S style
+repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
 
 # lineage-sdk
 repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps by default
