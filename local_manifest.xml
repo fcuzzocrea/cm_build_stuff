@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="fcuzzocrea/lineage_build_stuff" path="lineage_build_stuff" remote="github">
+  <project name="ssh://git@github.com/fcuzzocrea/lineage_build_stuff" path="lineage_build_stuff" remote="github">
     <linkfile src="picks.sh" dest="picks.sh" />
   </project>
 
