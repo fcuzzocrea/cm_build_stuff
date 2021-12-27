@@ -74,6 +74,9 @@ repopick 320467 # temp: common bring up hacks
 
 # -------------- PLATFORM STUFF --------------
 
+# manifest
+repopick 320752
+
 # art
 repopick 318097 -P art # art: Conditionally remove version check for memfd_create()
 
@@ -99,42 +102,46 @@ repopick 319379 # common: label new AIDL light HAL
 repopick 319380 # common: label new AIDL vibrator HAL
 
 # frameworks/av
-repopick 317360 # Add AudioSessionInfo
-repopick 320515 # Revert "stagefright: remove Miracast sender code"
-repopick 320516 # Revert "Removed unused class and its test"
-repopick 320517 # libstagefright: Remove libmediaextractor dependency
-repopick 320518 # libstagefright_wfd: compilation fixes
-repopick 320519 # stagefright: Fix SurfaceMediaSource getting handle from wrong position issue
-repopick 320520 # stagefright: Fix buffer handle retrieval in signalBufferReturned
-repopick 320521 # libstagefright_wfd: video encoder does not actually release MediaBufferBase when done
-repopick 320522 # audioflinger: Fix audio for WifiDisplay
-repopick 320523 # Partial revert "Move unused classes out of stagefright foundataion"
 
 # frameworks/base
 # Still needs to be ported
-# repopick 312889 # [1/3] SystemUI: add burnIn protection setting
 # repopick 295807 # Keyguard: Allow disabling fingerprint wake-and-unlock
-# repopick 289193 # SystemUI: Allow overlaying max notification icons
+repopick 320838 # Allow lid to send a generic COVER_CHANGED broadcast
+repopick 320839 # PhoneWindowManager: add LineageButtons volumekey hook
+repopick 320840 # Long-press power while display is off for torch
+repopick 320841 # Reimplement hardware keys custom rebinding
+repopick 320842 # Reimplement device hardware wake keys support
+repopick 320843 # PhoneWindowManager: Tap volume buttons to answer call
+repopick 320844 # PhoneWindowManager: Implement press home to answer call
+repopick 320845 # fw/b: Allow customisation of navbar app switch long press action
+repopick 320846 # PhoneWindowManager: Allow torch and track skip during ambient display
+repopick 320847 # fw/b torch: Let long press power turn torch off when screen is on.
+repopick 320848 # Implement edge long swipe gesture [1/3]
+repopick 317412 # SystemUI: add FloatingRotationButton for hw-key devices
+repopick 320849 # PhoneWindowManager: Add support for back key long press customization
+repopick 320853 # Don't pass repeated back key events to app if custom action is set up
+repopick 320850 # PhoneWindowManager: Forward port long press back to kill app
+repopick 320851 # Use custom flag for edge long swipe gesture
+repopick 320856 # Forward port 'Swap volume buttons' (1/3)
+repopick 320857 # Camera button support
+repopick 320860 # Add support for runtime toggle of navbar
+repopick 320896 # fw/b: Button backlight brightness
+repopick 320897 # PowerManagerService: Allow to light up buttons only when pressed
+repopick 320898 # PowerManager: Allow to distinguish different keypresses
+repopick 320899 # fwb: Re-introduce keyboard backlight brightness control
+repopick 320903 # PowerManager: Add proximity check on wake
 repopick 318494 # Split network policy XML parsing into read/write helper functions
 repopick 318495 # Implement backup/restore for network policy
-repopick 318826 # SystemUI: Bring back good ol' circle battery style
-repopick 318828 # QuickStatusBarHeader: don't disable estimate mode for centered notch devices
-repopick 318819 # SystemUI: Add tunables for clock position
-repopick 318820 # SystemUI: Add tunables for clock AM/PM style
-repopick 318821 # SystemUI: Make clock truly invisible
-repopick 318824 # SystemUI: Make center clock layout safe insets aware
-repopick 318825 # SystemUI: Fix up right clock handling when showing heads up
-repopick 318822 # SystemUI: fix clock dark/light mode switching
-repopick 318804 # SystemUI: Add Lineage statusbar item holder
-repopick 318805 # SystemUI: Network Traffic [1/3]
 repopick 317786 # monet: Add support for monet (cam16)
-repopick 318355 # SystemUI: Expose legacy Wi-Fi and cellular data QS tiles
-repopick 318356 # SystemUI: Allow Wi-Fi/cell tiles to co-exist with provider model
-repopick 320419 # Revert "[DO NOT MERGE] Make sure WiFi and Cell tiles are not created in Provider Model"
 repopick 318458 # SystemUI: Use AVCProfileMain for screen recorder
 repopick 318459 # Fix bug Device that can't support adoptable storage cannot read the sdcard.
 repopick 320710 # Squashed import of adb root patches
 repopick 320714 # SystemUI: add burnIn protection
+
+# frameworks/native
+repopick 320855 # Forward port 'Swap volume buttons' (2/3)
+repopick 320894 # PowerManager.h: Define USER_ACTIVITY_FLAG values
+repopick 320895 # InputDispatcher: On keypress, deliver keycode to pokeUserActivity
 
 # hardware/samsung
 repopick 318107 # Specify version for aidl_interface explicitly
@@ -154,10 +161,11 @@ repopick 320716 # AdvancedDisplay: Adapt to S style
 repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
 
 # lineage-sdk
+repopick 320854 # sdk: Move app killed toast message to main application thread
 repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps by default
 
 # packages/apps/Settings
-repopick 319490 # Migrate from network isolation to restricted networking mode
+repopick 320906 # Settings: Add proximity check on wake preference
 repopick 318021 # Settings: default to GlifV3Theme
 repopick 318022 # Settings: use Glif themed button bar
 repopick 318023 # Settings: Network setup UI changes for SUW
@@ -169,12 +177,18 @@ repopick 320713 # Squashed import of adb root patches
 # packages/apps/ThemePicker
 repopick -f 317574 # ThemePicker: Grant missing wallpaper permissions
 
+# packages/modules/common
+repopick 320751 -P packages/modules/common # Make adbroot_aidl_interface-ndk_platform available for adbd
+
 # packages/modules/Permission
 repopick 317972 -P packages/modules/Permission # PermissionController: Enable usage timeline for all permission groups
 repopick 317973 -P packages/modules/Permission # PermissionController: Show up to 7 days of permission usage history
 
 # system/bpf
 repopick 320591 -P system/bpf # Ignore bpf errors for < 4.9 kernels
+
+# system/logging
+repopick 320905 -P system/logging # liblog: Always report as debuggable when building userdebug/eng
 
 # system/netd
 repopick 320592 -P system/netd # Ignore netd errors for < 4.9 kernels
