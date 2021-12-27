@@ -24,8 +24,8 @@ repopick 320464 # herolte: remove liboemcrypto
 repopick 320463 # herolte: init: fix include path
 
 # device/samsung/hero2lte
-#repopick 319222 # hero2lte: remove liboemcrypto
-#repopick 320465 # hero2lte: init: fix include path
+repopick 319222 # hero2lte: remove liboemcrypto
+repopick 320465 # hero2lte: init: fix include path
 
 # device/samsung/klimt-common
 # repopick -g https://review.exynos5420.com 7791 # [DNM] klimt: remove touch hal for now
@@ -74,8 +74,12 @@ repopick 320467 # temp: common bring up hacks
 
 # -------------- PLATFORM STUFF --------------
 
-# manifest
-repopick 320752
+# android
+repopick 318755 # lineage: Enable Etar
+repopick 318307 # lineage: Enable SetupWizard
+repopick 317623 # manifest: Switch to more of our forks
+repopick 320752 # manifest: Switch to adb-root required forks
+repopick 320911 # lineage: Sync FlipFlap
 
 # art
 repopick 318097 -P art # art: Conditionally remove version check for memfd_create()
@@ -128,15 +132,20 @@ repopick 320860 # Add support for runtime toggle of navbar
 repopick 320896 # fw/b: Button backlight brightness
 repopick 320897 # PowerManagerService: Allow to light up buttons only when pressed
 repopick 320898 # PowerManager: Allow to distinguish different keypresses
-repopick 320899 # fwb: Re-introduce keyboard backlight brightness control
+repopick 320904 # fwb: Re-introduce keyboard backlight brightness control
 repopick 320903 # PowerManager: Add proximity check on wake
+repopick 320923 # SystemUI: Add quick settings pull down with one finger
+repopick 320924 # SystemUI: Add double tap to sleep gesture
+repopick 320925 # SystemUI: use DOUBLE_TAP_TO_WAKE setting also for wake from aod
+repopick 320930 # frameworks/base: Battery and Notification Lights
+repopick 320931 # frameworks/base: Lights notifications brightness support
+repopick 320714 # SystemUI: add burnIn protection
 repopick 318494 # Split network policy XML parsing into read/write helper functions
 repopick 318495 # Implement backup/restore for network policy
 repopick 317786 # monet: Add support for monet (cam16)
 repopick 318458 # SystemUI: Use AVCProfileMain for screen recorder
 repopick 318459 # Fix bug Device that can't support adoptable storage cannot read the sdcard.
 repopick 320710 # Squashed import of adb root patches
-repopick 320714 # SystemUI: add burnIn protection
 
 # frameworks/native
 repopick 320855 # Forward port 'Swap volume buttons' (2/3)
@@ -165,7 +174,16 @@ repopick 320854 # sdk: Move app killed toast message to main application thread
 repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps by default
 
 # packages/apps/Settings
+repopick 320774 # Settings: Fix hardcoded black text in storage summary
+repopick 320776 # Settings: Drop custom preferenceFragmentCompatStyle
+repopick 320779 # Settings: use framework text colors for SwitchBar
 repopick 320906 # Settings: Add proximity check on wake preference
+repopick 320922 # Settings: Add double tap to sleep preference
+repopick 320926 # Settings: gesture: Add LineageParts touchscreen gesture settings
+repopick 320927 # Settings: Allow devices to provide remote gesture preferences
+repopick 320929 # Settings: Add back battery and notification lights settings
+repopick 320932 # Settings: Add lockscreen visualizer toggle
+repopick 318091 # Settings: Add LineageOS legal info
 repopick 318021 # Settings: default to GlifV3Theme
 repopick 318022 # Settings: use Glif themed button bar
 repopick 318023 # Settings: Network setup UI changes for SUW
@@ -207,6 +225,5 @@ repopick -f 318085 # lineage: Update default wallpaper for 19.0
 # -------------- TOPIC STUFF --------------
 # still needs to be ported
 # repopick -t eleven-fastcharge
-# repopick -t eleven-button-lights
 
 exit 0

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="ssh://git@github.com/fcuzzocrea/lineage_build_stuff" path="lineage_build_stuff" remote="github">
+  <remote  name="github-personal" fetch="ssh://git@github.com"/>
+
+  <project name="fcuzzocrea/lineage_build_stuff" path="lineage_build_stuff" remote="github-personal">
     <linkfile src="picks.sh" dest="picks.sh" />
   </project>
 
@@ -22,6 +24,6 @@
   <!-- Personal Stuff -->
   <project name="luk1337/ih8sn" path="external/ih8sn" revision="master" />
   <!-- <project name="npjohnson/android_packages_apps_Launcher3" path="packages/apps/Launcher3" /> -->
-  <project name="fcuzzocrea/android_vendor_extra" path="vendor/extra" />
-  <project name="fcuzzocrea/android_vendor_google_pixel" path="vendor/google_pixel" />
+  <project name="fcuzzocrea/android_vendor_extra" path="vendor/extra" remote="github-personal"/>
+  <project name="fcuzzocrea/android_vendor_google_pixel" path="vendor/google_pixel" remote="github-personal"/>
 </manifest>
