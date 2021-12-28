@@ -75,11 +75,11 @@ repopick 320467 # temp: common bring up hacks
 # -------------- PLATFORM STUFF --------------
 
 # android
-repopick 318755 # lineage: Enable Etar
-repopick 318307 # lineage: Enable SetupWizard
-repopick 317623 # manifest: Switch to more of our forks
-repopick 320752 # manifest: Switch to adb-root required forks
-repopick 320911 # lineage: Sync FlipFlap
+# repopick 318755 # lineage: Enable Etar
+# repopick 318307 # lineage: Enable SetupWizard
+# repopick 317623 # manifest: Switch to more of our forks
+# repopick 320752 # manifest: Switch to adb-root required forks
+# repopick 320911 # lineage: Sync FlipFlap
 
 # art
 repopick 318097 -P art # art: Conditionally remove version check for memfd_create()
@@ -148,11 +148,11 @@ repopick 320947 # SystemUI: Port statusbar brightness control
 repopick 320953 # Support enforcing a minimum delay between notification sounds of an app.
 repopick 320710 # Squashed import of adb root patches
 # repopick 320714 # SystemUI: add burnIn protection
-repopick 318494 # Split network policy XML parsing into read/write helper functions
-repopick 318495 # Implement backup/restore for network policy
-repopick 320806 # fixup! Insert added packages to restricted networking mode's allowlist
-repopick 320802 # NetworkPolicyManagerService: Register broadcast receivers for PACKAGE_ADDED and UID_REMOVED on all users
-repopick 320805 # Insert/remove packages from new/deleted users to/from restricted networking mode's allowlist
+# repopick 318494 # Split network policy XML parsing into read/write helper functions
+# repopick 318495 # Implement backup/restore for network policy
+# repopick 320806 # fixup! Insert added packages to restricted networking mode's allowlist
+# repopick 320802 # NetworkPolicyManagerService: Register broadcast receivers for PACKAGE_ADDED and UID_REMOVED on all users
+# repopick 320805 # Insert/remove packages from new/deleted users to/from restricted networking mode's allowlist
 repopick 317786 # monet: Add support for monet (cam16)
 repopick 318458 # SystemUI: Use AVCProfileMain for screen recorder
 repopick 318459 # Fix bug Device that can't support adoptable storage cannot read the sdcard.
@@ -181,7 +181,7 @@ repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
 
 # lineage-sdk
 repopick 320854 # sdk: Move app killed toast message to main application thread
-repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps by default
+# repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps by default
 
 # packages/apps/Settings
 repopick 318091 # Settings: Add LineageOS legal info
