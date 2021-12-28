@@ -143,6 +143,9 @@ repopick 320933 # SystemUI: Add visualizer feature
 repopick 320935 # SystemUI: Allow to enable Lockscreen Media Art [1/3]
 repopick 320936 # SystemUI: Hide lockscreen media art if media is not playing
 repopick 320940 # Add an option to force pre-O apps to use full screen aspect ratio
+repopick 320945 # PowerManagerService: Wake on plug (1/2)
+repopick 320947 # SystemUI: Port statusbar brightness control
+repopick 320953 # Support enforcing a minimum delay between notification sounds of an app.
 repopick 320710 # Squashed import of adb root patches
 # repopick 320714 # SystemUI: add burnIn protection
 repopick 318494 # Split network policy XML parsing into read/write helper functions
@@ -190,6 +193,8 @@ repopick 320929 # Settings: Add back battery and notification lights settings
 repopick 320932 # Settings: Add lockscreen visualizer toggle
 repopick 320937 # Settings: Add toggle for Lockscreen Media Art [2/3]
 repopick 320941 # Settings: Add an option to force pre-O apps to use full screen aspect ratio
+repopick 320946 # Settings: display: Add wake on plug switch
+repopick 320952 # Settings: Add setup UI for minimum delay between an app's notification sounds
 repopick 320711 # Add toggle to enable ADB root
 repopick 318023 # Settings: Network setup UI changes for SUW
 repopick 320774 # Settings: Fix hardcoded black text in storage summary
