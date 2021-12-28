@@ -139,13 +139,20 @@ repopick 320924 # SystemUI: Add double tap to sleep gesture
 repopick 320925 # SystemUI: use DOUBLE_TAP_TO_WAKE setting also for wake from aod
 repopick 320930 # frameworks/base: Battery and Notification Lights
 repopick 320931 # frameworks/base: Lights notifications brightness support
-repopick 320714 # SystemUI: add burnIn protection
+repopick 320933 # SystemUI: Add visualizer feature
+repopick 320935 # SystemUI: Allow to enable Lockscreen Media Art [1/3]
+repopick 320936 # SystemUI: Hide lockscreen media art if media is not playing
+repopick 320940 # Add an option to force pre-O apps to use full screen aspect ratio
+repopick 320710 # Squashed import of adb root patches
+# repopick 320714 # SystemUI: add burnIn protection
 repopick 318494 # Split network policy XML parsing into read/write helper functions
 repopick 318495 # Implement backup/restore for network policy
+repopick 320806 # fixup! Insert added packages to restricted networking mode's allowlist
+repopick 320802 # NetworkPolicyManagerService: Register broadcast receivers for PACKAGE_ADDED and UID_REMOVED on all users
+repopick 320805 # Insert/remove packages from new/deleted users to/from restricted networking mode's allowlist
 repopick 317786 # monet: Add support for monet (cam16)
 repopick 318458 # SystemUI: Use AVCProfileMain for screen recorder
 repopick 318459 # Fix bug Device that can't support adoptable storage cannot read the sdcard.
-repopick 320710 # Squashed import of adb root patches
 
 # frameworks/native
 repopick 320855 # Forward port 'Swap volume buttons' (2/3)
@@ -174,20 +181,23 @@ repopick 320854 # sdk: Move app killed toast message to main application thread
 repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps by default
 
 # packages/apps/Settings
-repopick 320774 # Settings: Fix hardcoded black text in storage summary
-repopick 320776 # Settings: Drop custom preferenceFragmentCompatStyle
-repopick 320779 # Settings: use framework text colors for SwitchBar
+repopick 318091 # Settings: Add LineageOS legal info
 repopick 320906 # Settings: Add proximity check on wake preference
 repopick 320922 # Settings: Add double tap to sleep preference
 repopick 320926 # Settings: gesture: Add LineageParts touchscreen gesture settings
 repopick 320927 # Settings: Allow devices to provide remote gesture preferences
 repopick 320929 # Settings: Add back battery and notification lights settings
 repopick 320932 # Settings: Add lockscreen visualizer toggle
-repopick 318091 # Settings: Add LineageOS legal info
+repopick 320937 # Settings: Add toggle for Lockscreen Media Art [2/3]
+repopick 320941 # Settings: Add an option to force pre-O apps to use full screen aspect ratio
+repopick 320711 # Add toggle to enable ADB root
+repopick 318023 # Settings: Network setup UI changes for SUW
+repopick 320774 # Settings: Fix hardcoded black text in storage summary
+repopick 320776 # Settings: Drop custom preferenceFragmentCompatStyle
+repopick 320779 # Settings: use framework text colors for SwitchBar
 repopick 318021 # Settings: default to GlifV3Theme
 repopick 318022 # Settings: use Glif themed button bar
 repopick 318023 # Settings: Network setup UI changes for SUW
-repopick 320711 # Add toggle to enable ADB root
 
 # packages/modules/adb
 repopick 320713 # Squashed import of adb root patches
