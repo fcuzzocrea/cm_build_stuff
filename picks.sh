@@ -56,6 +56,7 @@ repopick 320453 # universal8890: init: fix libinit compilation
 repopick 320454 # universal8890: sepolicy: drop sysfs_block
 repopick 320455 # universal8890: Rename exported3_radio_prop to radio_control_prop
 repopick 320655 # universal8890: Set BPF support level
+repopick 321059 # universal8890: split vendor and system properties
 repopick 320456 # Revert "Revert "universal8890: add common BSP flags""
 repopick 320457 # Revert "Revert "universal8890: Add gralloc header""
 repopick 320458 # Revert "Revert "universal8890: Update gralloc header""
@@ -138,15 +139,17 @@ repopick 320935 # SystemUI: Allow to enable Lockscreen Media Art [1/3]
 repopick 320936 # SystemUI: Hide lockscreen media art if media is not playing
 repopick 320940 # Add an option to force pre-O apps to use full screen aspect ratio
 repopick 320945 # PowerManagerService: Wake on plug (1/2)
-repopick 320947 # SystemUI: Port statusbar brightness control
 repopick 320953 # Support enforcing a minimum delay between notification sounds of an app.
+repopick 318763 # SystemUI: runtime configurable audio panel location
+repopick 321056 # frameworks: Power menu customizations
+repopick 320947 # SystemUI: Port statusbar brightness control
+repopick 320765 # SystemUI: Fix shutter sound
 repopick 320710 # Squashed import of adb root patches
 # repopick 320714 # SystemUI: add burnIn protection
-repopick 318494 # Split network policy XML parsing into read/write helper functions
-repopick 318495 # Implement backup/restore for network policy
-repopick 320806 # fixup! Insert added packages to restricted networking mode's allowlist
-repopick 320802 # NetworkPolicyManagerService: Register broadcast receivers for PACKAGE_ADDED and UID_REMOVED on all users
-repopick 320805 # Insert/remove packages from new/deleted users to/from restricted networking mode's allowlist
+repopick 321010 # SettingsProvider: Add a UID list validator
+repopick 321011 # Settings.Global: Add UIDS_ALLOWED_ON_RESTRICTED_NETWORKS
+repopick 321012 # NetworkPolicyManager: Add POLICY_REJECT_ALL constant
+repopick 319490 # Migrate from network isolation to restricted networking mode
 repopick 317786 # monet: Add support for monet (cam16)
 repopick 318458 # SystemUI: Use AVCProfileMain for screen recorder
 repopick 318459 # Fix bug Device that can't support adoptable storage cannot read the sdcard.
@@ -177,8 +180,10 @@ repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
 repopick 320854 # sdk: Move app killed toast message to main application thread
 repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps by default
 
+# packages/apps/LineageParts
+repopick 321058 # LineageParts: RIP ChargingSoundsSettings
+
 # packages/apps/Settings
-repopick 318091 # Settings: Add LineageOS legal info
 repopick 320906 # Settings: Add proximity check on wake preference
 repopick 320922 # Settings: Add double tap to sleep preference
 repopick 320926 # Settings: gesture: Add LineageParts touchscreen gesture settings
@@ -189,6 +194,8 @@ repopick 320937 # Settings: Add toggle for Lockscreen Media Art [2/3]
 repopick 320941 # Settings: Add an option to force pre-O apps to use full screen aspect ratio
 repopick 320946 # Settings: display: Add wake on plug switch
 repopick 320952 # Settings: Add setup UI for minimum delay between an app's notification sounds
+repopick 321051 # Settings: Add advanced restart switch
+repopick 321038 # Settings: Add back increasing ring feature (2/2).
 repopick 320711 # Add toggle to enable ADB root
 repopick 320774 # Settings: Fix hardcoded black text in storage summary
 repopick 320776 # Settings: Drop custom preferenceFragmentCompatStyle
