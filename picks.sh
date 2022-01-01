@@ -99,11 +99,7 @@ repopick 319378 # common: drop properties with invalid vendor namespace
 repopick 319379 # common: label new AIDL light HAL
 repopick 319380 # common: label new AIDL vibrator HAL
 
-# frameworks/av
-
 # frameworks/base
-# Still needs to be ported
-# repopick 295807 # Keyguard: Allow disabling fingerprint wake-and-unlock
 repopick 320838 # Allow lid to send a generic COVER_CHANGED broadcast
 repopick 320839 # PhoneWindowManager: add LineageButtons volumekey hook
 repopick 320840 # Long-press power while display is off for torch
@@ -143,9 +139,10 @@ repopick 320953 # Support enforcing a minimum delay between notification sounds 
 repopick 318763 # SystemUI: runtime configurable audio panel location
 repopick 321056 # frameworks: Power menu customizations
 repopick 320947 # SystemUI: Port statusbar brightness control
+repopick 321160 # Keyguard: Allow disabling fingerprint wake-and-unlock
+repopick 320714 # SystemUI: add burnIn protection
 repopick 320765 # SystemUI: Fix shutter sound
 repopick 320710 # Squashed import of adb root patches
-# repopick 320714 # SystemUI: add burnIn protection
 repopick 321010 # SettingsProvider: Add a UID list validator
 repopick 321011 # Settings.Global: Add UIDS_ALLOWED_ON_RESTRICTED_NETWORKS
 repopick 321012 # NetworkPolicyManager: Add POLICY_REJECT_ALL constant
