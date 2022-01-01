@@ -177,10 +177,12 @@ repopick 320716 # AdvancedDisplay: Adapt to S style
 repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
 
 # lineage-sdk
+repopick 321154 # preference: Introduce {Global,Secure,System}MainSwitchPreference
 repopick 320854 # sdk: Move app killed toast message to main application thread
 repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps by default
 
 # packages/apps/LineageParts
+repopick 321075 # [WIP] parts: Adapt to S style
 repopick 321058 # LineageParts: RIP ChargingSoundsSettings
 
 # packages/apps/Settings
