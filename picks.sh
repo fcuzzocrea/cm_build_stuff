@@ -57,6 +57,15 @@ repopick 320454 # universal8890: sepolicy: drop sysfs_block
 repopick 320455 # universal8890: Rename exported3_radio_prop to radio_control_prop
 repopick 320655 # universal8890: Set BPF support level
 repopick 321059 # universal8890: split vendor and system properties
+repopick 321321 # universal8890: Switch to opensource secril_config_svc
+repopici 321322 # universal8890: Remove obsolete debug.sf.disable_backpressure property
+repopick 321323 # universal889: sepolicy: dont audit neuralnetwork hal wanting to access /data/data
+repopick 321324 # universal8890: sepolicy: dont audit lhd wanting to access /data/data
+repopick 321325 # universal8890: sepolicy: dont audit gpsd wanting to access /data/data
+repopick 321326 # universal8890: sepolicy: define sysfs_io_sched_tuneable
+repopick 321327 # sepolicy: label few props
+repopick 321328 # universal8890: add BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES
+repopick 321329 # universal8890: ignore neverallows
 repopick 320456 # Revert "Revert "universal8890: add common BSP flags""
 repopick 320457 # Revert "Revert "universal8890: Add gralloc header""
 repopick 320458 # Revert "Revert "universal8890: Update gralloc header""
@@ -94,10 +103,12 @@ repopick 319362 # sepolicy: Switch to SYSTEM_EXT_{PUBLIC,PRIVATE}_SEPOLICY_DIRS
 repopick 319363 # common: Update radio prop context
 repopick 319364 # Revert "common: Label ro.gfx.driver.1 propertiy"
 repopick 319405 # Attach vendor_property_type to properties
+repopick 321317 # mobicore: legacy: do now allow tee to set system_prop
 repopick 319376 # common: remove ro.build.PDA prop
 repopick 319378 # common: drop properties with invalid vendor namespace
 repopick 319379 # common: label new AIDL light HAL
 repopick 319380 # common: label new AIDL vibrator HAL
+repopick 321318 # fastchage: allow connecto permission
 
 # frameworks/base
 repopick 320838 # Allow lid to send a generic COVER_CHANGED broadcast
@@ -138,15 +149,11 @@ repopick 320945 # PowerManagerService: Wake on plug (1/2)
 repopick 320953 # Support enforcing a minimum delay between notification sounds of an app.
 repopick 318763 # SystemUI: runtime configurable audio panel location
 repopick 321056 # frameworks: Power menu customizations
+repopick 321292 # Use flow layout for advanced power menu aswell
 repopick 320947 # SystemUI: Port statusbar brightness control
 repopick 321160 # Keyguard: Allow disabling fingerprint wake-and-unlock
 repopick 320714 # SystemUI: add burnIn protection
 repopick 320765 # SystemUI: Fix shutter sound
-repopick 320710 # Squashed import of adb root patches
-repopick 321010 # SettingsProvider: Add a UID list validator
-repopick 321011 # Settings.Global: Add UIDS_ALLOWED_ON_RESTRICTED_NETWORKS
-repopick 321012 # NetworkPolicyManager: Add POLICY_REJECT_ALL constant
-repopick 319490 # Migrate from network isolation to restricted networking mode
 repopick 317786 # monet: Add support for monet (cam16)
 repopick 318458 # SystemUI: Use AVCProfileMain for screen recorder
 repopick 318459 # Fix bug Device that can't support adoptable storage cannot read the sdcard.
@@ -172,15 +179,10 @@ repopick 319360 # mkbootimg: Update for S
 repopick 319399 # doze: Adapt to S style
 repopick 320716 # AdvancedDisplay: Adapt to S style
 repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
+repopick 321319 # audio: add LOCAL_VENDOR_MODULE
 
 # lineage-sdk
-repopick 321154 # preference: Introduce {Global,Secure,System}MainSwitchPreference
 repopick 320854 # sdk: Move app killed toast message to main application thread
-repopick 318514 # Enable Restricted Networking Mode and allowlist INTERNET apps by default
-
-# packages/apps/LineageParts
-repopick 321075 # [WIP] parts: Adapt to S style
-repopick 321058 # LineageParts: RIP ChargingSoundsSettings
 
 # packages/apps/Settings
 repopick 320906 # Settings: Add proximity check on wake preference
@@ -195,13 +197,9 @@ repopick 320946 # Settings: display: Add wake on plug switch
 repopick 320952 # Settings: Add setup UI for minimum delay between an app's notification sounds
 repopick 321051 # Settings: Add advanced restart switch
 repopick 321038 # Settings: Add back increasing ring feature (2/2).
-repopick 320711 # Add toggle to enable ADB root
 repopick 320774 # Settings: Fix hardcoded black text in storage summary
 repopick 320776 # Settings: Drop custom preferenceFragmentCompatStyle
 repopick 320779 # Settings: use framework text colors for SwitchBar
-
-# packages/modules/adb
-repopick 320713 # Squashed import of adb root patches
 
 # packages/apps/ThemePicker
 repopick -f 317574 # ThemePicker: Grant missing wallpaper permissions
@@ -215,9 +213,6 @@ repopick 317973 -P packages/modules/Permission # PermissionController: Show up t
 
 # system/bpf
 repopick 320591 -P system/bpf # Ignore bpf errors for < 4.9 kernels
-
-# system/logging
-repopick 320905 -P system/logging # liblog: Always report as debuggable when building userdebug/eng
 
 # system/netd
 repopick 320592 -P system/netd # Ignore netd errors for < 4.9 kernels
