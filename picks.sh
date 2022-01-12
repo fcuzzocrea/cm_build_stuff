@@ -40,11 +40,9 @@ repopick 320465 # hero2lte: init: fix include path
 repopick 320439 # universal8890: Update clearkey plugin to drm HAL v1.4
 repopick 320440 # universal8890: explicitly build RIL HIDL dependencies
 repopick 320441 # universal8890: sepolicy: Attach vendor_property_type to properties
-repopick 320441 # universal8890: sepolicy: Attach vendor_property_type to properties
 repopick 320442 # universal8890: Set manufacturer and soc properties
 repopick 320443 # universal8890: uprev fingerprint HAL to v2.3
 repopick 320444 # universal8890: switch to new AIDL light HAL
-repopick 320445 # universal8890: Remove vendor RenderScript implementation.
 repopick 320446 # universal8890: Uprev audio HAL to V7
 repopick 320447 # universal8890: switch to new AIDL vibrator HAL
 repopick 320448 # universal8890: Disable the usage of ConfigStore.
@@ -58,7 +56,7 @@ repopick 320455 # universal8890: Rename exported3_radio_prop to radio_control_pr
 repopick 320655 # universal8890: Set BPF support level
 repopick 321059 # universal8890: split vendor and system properties
 repopick 321321 # universal8890: Switch to opensource secril_config_svc
-repopici 321322 # universal8890: Remove obsolete debug.sf.disable_backpressure property
+repopick 321322 # universal8890: Remove obsolete debug.sf.disable_backpressure property
 repopick 321323 # universal889: sepolicy: dont audit neuralnetwork hal wanting to access /data/data
 repopick 321324 # universal8890: sepolicy: dont audit lhd wanting to access /data/data
 repopick 321325 # universal8890: sepolicy: dont audit gpsd wanting to access /data/data
@@ -80,7 +78,6 @@ repopick 320462 # TEMP: universal8890: common bring up hacks
 
 # kernel/samsung/universal8890
 repopick 320466 # arch/arm64: configs: disable CONFIG_RT_GROUP_SCHED
-repopick 320467 # temp: common bring up hacks
 
 # -------------- PLATFORM STUFF --------------
 
@@ -151,6 +148,12 @@ repopick 318763 # SystemUI: runtime configurable audio panel location
 repopick 321056 # frameworks: Power menu customizations
 repopick 321292 # Use flow layout for advanced power menu aswell
 repopick 320947 # SystemUI: Port statusbar brightness control
+repopick 317800 # Udfps: Make pressed udfp view configurable
+repopick 317799 # udfps: Implement UdfpsHbmProvider
+repopick 317801 # udfps: change window type to TYPE_DISPLAY_OVERLAY
+repopick 317802 # udfps: Allow to configure hbm overlay type
+repopick 317803 # udfps: Add support for udfps on aod without having dedicated sensor
+repopick 317943 # UdfpsController: Call onFingerDown on action down events
 repopick 321160 # Keyguard: Allow disabling fingerprint wake-and-unlock
 repopick 320714 # SystemUI: add burnIn protection
 repopick 320765 # SystemUI: Fix shutter sound
