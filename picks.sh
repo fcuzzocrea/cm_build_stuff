@@ -17,7 +17,10 @@ source build/envsetup.sh
 # -------------- DEVICE STUFF --------------
 
 # device/lineage/sepolicy
+repopick 319293 # Reenable camera allow- and excludelist property labels
 repopick 319592 # Reenable persist.vendor.recovery_update
+repopick 322576 # common: Label IUdfpsSensor
+repopick 321910 # sepolicy: Drop Lineage performance policy
 
 # device/samsung/herolte
 repopick 320464 # herolte: remove liboemcrypto
@@ -85,8 +88,6 @@ repopick 320466 # arch/arm64: configs: disable CONFIG_RT_GROUP_SCHED
 repopick 318097 -P art # art: Conditionally remove version check for memfd_create()
 
 # build
-repopick 317298 # Add BOARD_CUSTOM_BOOTIMG_MK support
-repopick 317300 # build: Add support for device tree in boot.img
 
 # build/make
 repopick -f 318081 # Sorry bro: 6 -> 3
@@ -94,18 +95,6 @@ repopick -f 318081 # Sorry bro: 6 -> 3
 # build/soong
 repopick 320142 # Add dumpvars for WITH_EXYNOS_BSP
 repopick 317133 # soong: Add equivalent for LOCAL_EXPORT_CFLAGS
-
-# device/samsung_slsi/sepolicy
-repopick 319362 # sepolicy: Switch to SYSTEM_EXT_{PUBLIC,PRIVATE}_SEPOLICY_DIRS
-repopick 319363 # common: Update radio prop context
-repopick 319364 # Revert "common: Label ro.gfx.driver.1 propertiy"
-repopick 319405 # Attach vendor_property_type to properties
-repopick 321317 # mobicore: legacy: do now allow tee to set system_prop
-repopick 319376 # common: remove ro.build.PDA prop
-repopick 319378 # common: drop properties with invalid vendor namespace
-repopick 319379 # common: label new AIDL light HAL
-repopick 319380 # common: label new AIDL vibrator HAL
-repopick 321318 # fastchage: allow connecto permission
 
 # frameworks/base
 repopick 320838 # Allow lid to send a generic COVER_CHANGED broadcast
@@ -120,6 +109,7 @@ repopick 320846 # PhoneWindowManager: Allow torch and track skip during ambient 
 repopick 320847 # fw/b torch: Let long press power turn torch off when screen is on.
 repopick 320848 # Implement edge long swipe gesture [1/3]
 repopick 317412 # SystemUI: add FloatingRotationButton for hw-key devices
+repopick 321274 # SystemUI: don't show FRB when IME is visible
 repopick 320849 # PhoneWindowManager: Add support for back key long press customization
 repopick 320853 # Don't pass repeated back key events to app if custom action is set up
 repopick 320850 # PhoneWindowManager: Forward port long press back to kill app
@@ -148,44 +138,51 @@ repopick 318763 # SystemUI: runtime configurable audio panel location
 repopick 321056 # frameworks: Power menu customizations
 repopick 321292 # Use flow layout for advanced power menu aswell
 repopick 320947 # SystemUI: Port statusbar brightness control
+repopick 321580 # Move high touch sensitivity and hovering to InputService
 repopick 317800 # Udfps: Make pressed udfp view configurable
 repopick 317799 # udfps: Implement UdfpsHbmProvider
 repopick 317801 # udfps: change window type to TYPE_DISPLAY_OVERLAY
 repopick 317802 # udfps: Allow to configure hbm overlay type
 repopick 317803 # udfps: Add support for udfps on aod without having dedicated sensor
 repopick 317943 # UdfpsController: Call onFingerDown on action down events
+repopick 321111 # Revert "perf: Add hooks used by lineage-sdk"
 repopick 321160 # Keyguard: Allow disabling fingerprint wake-and-unlock
 repopick 320714 # SystemUI: add burnIn protection
-repopick 320765 # SystemUI: Fix shutter sound
 repopick 317786 # monet: Add support for monet (cam16)
-repopick 318458 # SystemUI: Use AVCProfileMain for screen recorder
-repopick 318459 # Fix bug Device that can't support adoptable storage cannot read the sdcard.
+repopick 322825 # Add CHANNEL_MODE_DUAL_CHANNEL constant
+repopick 322826 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
+repopick 322827 # Allow SBC as HD audio codec in Bluetooth device configuration
+repopick 322828 # Explicitly make SBC Dual Channel an optional (HD) codec
 
 # frameworks/native
+repopick 321112 # powermanager: Drop Lineage HAL support
 repopick 320855 # Forward port 'Swap volume buttons' (2/3)
 repopick 320894 # PowerManager.h: Define USER_ACTIVITY_FLAG values
 repopick 320895 # InputDispatcher: On keypress, deliver keycode to pokeUserActivity
+repopick 317924 # surfaceflinger: Add support for Udfps extension lib
+repopick 317944 # CompositionEngine: Request device composition for the Udfps touched layer
+
+# hardware/lineage/interfaces
+repopick 321908 # power: Deprecate lineage power HAL
 
 # hardware/samsung
-repopick 318107 # Specify version for aidl_interface explicitly
-repopick 318109 # NO, Thank You!
-repopick 288286 # thermal: Remove static vndk dep from vendor modules
-repopick 319371 # [thermal] Use new jsoncpp API
-repopick 319372 # hidl: fingerprint: Uprev to 2.3
-repopick 319373 # samsung: light: convert to AIDL implementation
-repopick 319374 # samsung: vibrator: convert to AIDL implementation
-repopick 319375 # aidl: vibrator: improve amplitude values
-repopick 319622 # fingerprint: implement ss_fingerprint_request
-repopick 319623 # fingerprint: implement gestures
-repopick 319921 # samsung: add secril_config_svc
-repopick 319360 # mkbootimg: Update for S
-repopick 319399 # doze: Adapt to S style
 repopick 320716 # AdvancedDisplay: Adapt to S style
+repopick 322464 # AdvancedDisplay: Add exported flags in manifest
+repopick -f 304029 # samsung: doze: add standard pickup sensor support
+repopick 322878 # fingerprint: Revert "fpc: keep fpc in system-background"
 repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
 repopick 321319 # audio: add LOCAL_VENDOR_MODULE
 
 # lineage-sdk
+repopick 321906 # sdk: Nuke perf profiles
+repopick 321911 # sdk: Remove Styles leftover from lineage_stub_packages
 repopick 320854 # sdk: Move app killed toast message to main application thread
+
+# packages/apps/Bluetooth
+repopick 322838 # SBC Dual Channel (SBC HD Audio) support
+
+# packages/apps/LineageParts
+repopick 321905 # parts: Nuke perf profiles settings
 
 # packages/apps/Settings
 repopick 320906 # Settings: Add proximity check on wake preference
@@ -199,16 +196,13 @@ repopick 320941 # Settings: Add an option to force pre-O apps to use full screen
 repopick 320946 # Settings: display: Add wake on plug switch
 repopick 320952 # Settings: Add setup UI for minimum delay between an app's notification sounds
 repopick 321051 # Settings: Add advanced restart switch
-repopick 321038 # Settings: Add back increasing ring feature (2/2).
+repopick 321218 # Settings: Add FastCharge preference into Battery settings
+repopick 321581 # Settings: Add high touch sensitivity and touchscreen hovering toggles
+repopick 321766 # fingerprint: Allow devices to configure sensor location
+repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 repopick 320774 # Settings: Fix hardcoded black text in storage summary
 repopick 320776 # Settings: Drop custom preferenceFragmentCompatStyle
 repopick 320779 # Settings: use framework text colors for SwitchBar
-
-# packages/apps/ThemePicker
-repopick -f 317574 # ThemePicker: Grant missing wallpaper permissions
-
-# packages/modules/common
-repopick 320751 -P packages/modules/common # Make adbroot_aidl_interface-ndk_platform available for adbd
 
 # packages/modules/Permission
 repopick 317972 -P packages/modules/Permission # PermissionController: Enable usage timeline for all permission groups
@@ -217,17 +211,28 @@ repopick 317973 -P packages/modules/Permission # PermissionController: Show up t
 # system/bpf
 repopick 320591 -P system/bpf # Ignore bpf errors for < 4.9 kernels
 
+# system/bt
+repopick 322834 # Increase maximum Bluetooth SBC codec bitrate for SBC HD
+repopick 322835 # Explicit SBC Dual Channel (SBC HD) support
+repopick 322836 # Allow using alternative (higher) SBC HD bitrates with a property
+
 # system/netd
 repopick 320592 -P system/netd # Ignore netd errors for < 4.9 kernels
 
-# system/tools/mkbootimg
-repopick 319780 -P system/tools/mkbootimg # mkbootimg: add support for --dt
+# tools/extract-utils
+repopick 320992 # extract_utils: allow overriding package name
+repopick 320993 # extract_utils: disable strip for ELF binaries as well
+repopick 320994 # extract_utils: do not cut off extension for cc_binary_prebuilt
+repopick 322474 # extract-utils: automatically prepend manifest_ to vintf manifests that don't have it
 
 ## vendor/lineage
+repopick 321907 # config: Delete perf permission
 repopick 318283 # overlay: core: Remove accent color overrides
 repopick 317788 # overlay: Enable monet
 repopick 317981 # device_config: Save discrete app op history for more permissions
 repopick 317982 # device_config: Keep up to 7 days of permission usage history
+repopick -f 318087 # lineage: Disable privapp permission enforcement (make it log)
+repopick -f 318088 # adb insecure by default
 repopick -f 318084 # lineage: Moar fontz
 repopick -f 318085 # lineage: Update default wallpaper for 19.0
 
