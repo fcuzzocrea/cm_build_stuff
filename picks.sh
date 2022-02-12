@@ -22,6 +22,17 @@ repopick 319592 # Reenable persist.vendor.recovery_update
 repopick 322576 # common: Label IUdfpsSensor
 repopick 321910 # sepolicy: Drop Lineage performance policy
 
+# device/samsung_slsi/sepolicy
+repopick 323075 # mobicore: label mcDriverDaemon
+repopick 323077 # common: label lhd
+repopick 323078 # common: label partitions for older models
+repopick 323079 # common: label samsung GNSS HAL
+repopick 323080 # common: label macloader
+repopick 323081 # common: label gpsd
+repopick 323310 # common: label widevine/clearkey DRM hals
+repopick 323311 # common: label keymaster HAL
+repopick 323312 # common: label graphics files
+
 # device/samsung/herolte
 repopick 320464 # herolte: remove liboemcrypto
 repopick 320463 # herolte: init: fix include path
@@ -97,7 +108,6 @@ repopick 320142 # Add dumpvars for WITH_EXYNOS_BSP
 repopick 317133 # soong: Add equivalent for LOCAL_EXPORT_CFLAGS
 
 # frameworks/base
-repopick 320838 # Allow lid to send a generic COVER_CHANGED broadcast
 repopick 320839 # PhoneWindowManager: add LineageButtons volumekey hook
 repopick 320840 # Long-press power while display is off for torch
 repopick 320841 # Reimplement hardware keys custom rebinding
@@ -116,36 +126,22 @@ repopick 320850 # PhoneWindowManager: Forward port long press back to kill app
 repopick 320851 # Use custom flag for edge long swipe gesture
 repopick 320856 # Forward port 'Swap volume buttons' (1/3)
 repopick 320857 # Camera button support
-repopick 320928 # SystemUI: handle camera launch gesture from keyhandler
 repopick 320860 # Add support for runtime toggle of navbar
 repopick 320896 # fw/b: Button backlight brightness
 repopick 320897 # PowerManagerService: Allow to light up buttons only when pressed
 repopick 320898 # PowerManager: Allow to distinguish different keypresses
 repopick 320904 # fwb: Re-introduce keyboard backlight brightness control
-repopick 320903 # PowerManager: Add proximity check on wake
-repopick 320923 # SystemUI: Add quick settings pull down with one finger
-repopick 320924 # SystemUI: Add double tap to sleep gesture
-repopick 320925 # SystemUI: use DOUBLE_TAP_TO_WAKE setting also for wake from aod
-repopick 320930 # frameworks/base: Battery and Notification Lights
-repopick 320931 # frameworks/base: Lights notifications brightness support
-repopick 320933 # SystemUI: Add visualizer feature
-repopick 320935 # SystemUI: Allow to enable Lockscreen Media Art [1/3]
-repopick 320936 # SystemUI: Hide lockscreen media art if media is not playing
-repopick 320940 # Add an option to force pre-O apps to use full screen aspect ratio
-repopick 320945 # PowerManagerService: Wake on plug (1/2)
-repopick 320953 # Support enforcing a minimum delay between notification sounds of an app.
 repopick 318763 # SystemUI: runtime configurable audio panel location
 repopick 321056 # frameworks: Power menu customizations
+repopick 321167 # Zygote: Fix an issue when empty the usap pool.
 repopick 321292 # Use flow layout for advanced power menu aswell
 repopick 320947 # SystemUI: Port statusbar brightness control
-repopick 321580 # Move high touch sensitivity and hovering to InputService
 repopick 317800 # Udfps: Make pressed udfp view configurable
 repopick 317799 # udfps: Implement UdfpsHbmProvider
 repopick 317801 # udfps: change window type to TYPE_DISPLAY_OVERLAY
 repopick 317802 # udfps: Allow to configure hbm overlay type
 repopick 317803 # udfps: Add support for udfps on aod without having dedicated sensor
 repopick 317943 # UdfpsController: Call onFingerDown on action down events
-repopick 321111 # Revert "perf: Add hooks used by lineage-sdk"
 repopick 321160 # Keyguard: Allow disabling fingerprint wake-and-unlock
 repopick 320714 # SystemUI: add burnIn protection
 repopick 317786 # monet: Add support for monet (cam16)
@@ -155,15 +151,11 @@ repopick 322827 # Allow SBC as HD audio codec in Bluetooth device configuration
 repopick 322828 # Explicitly make SBC Dual Channel an optional (HD) codec
 
 # frameworks/native
-repopick 321112 # powermanager: Drop Lineage HAL support
 repopick 320855 # Forward port 'Swap volume buttons' (2/3)
 repopick 320894 # PowerManager.h: Define USER_ACTIVITY_FLAG values
 repopick 320895 # InputDispatcher: On keypress, deliver keycode to pokeUserActivity
 repopick 317924 # surfaceflinger: Add support for Udfps extension lib
 repopick 317944 # CompositionEngine: Request device composition for the Udfps touched layer
-
-# hardware/lineage/interfaces
-repopick 321908 # power: Deprecate lineage power HAL
 
 # hardware/samsung
 repopick 320716 # AdvancedDisplay: Adapt to S style
@@ -172,33 +164,16 @@ repopick -f 304029 # samsung: doze: add standard pickup sensor support
 repopick 322878 # fingerprint: Revert "fpc: keep fpc in system-background"
 repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
 repopick 321319 # audio: add LOCAL_VENDOR_MODULE
+repopick 323525 # aidl: vibrator: properly implement effects
 
 # lineage-sdk
-repopick 321906 # sdk: Nuke perf profiles
-repopick 321911 # sdk: Remove Styles leftover from lineage_stub_packages
 repopick 320854 # sdk: Move app killed toast message to main application thread
 
 # packages/apps/Bluetooth
 repopick 322838 # SBC Dual Channel (SBC HD Audio) support
 
-# packages/apps/LineageParts
-repopick 321905 # parts: Nuke perf profiles settings
-
 # packages/apps/Settings
-repopick 320906 # Settings: Add proximity check on wake preference
-repopick 320922 # Settings: Add double tap to sleep preference
-repopick 320926 # Settings: gesture: Add LineageParts touchscreen gesture settings
-repopick 320927 # Settings: Allow devices to provide remote gesture preferences
-repopick 320929 # Settings: Add back battery and notification lights settings
-repopick 320932 # Settings: Add lockscreen visualizer toggle
-repopick 320937 # Settings: Add toggle for Lockscreen Media Art [2/3]
-repopick 320941 # Settings: Add an option to force pre-O apps to use full screen aspect ratio
-repopick 320946 # Settings: display: Add wake on plug switch
-repopick 320952 # Settings: Add setup UI for minimum delay between an app's notification sounds
 repopick 321051 # Settings: Add advanced restart switch
-repopick 321218 # Settings: Add FastCharge preference into Battery settings
-repopick 321581 # Settings: Add high touch sensitivity and touchscreen hovering toggles
-repopick 321766 # fingerprint: Allow devices to configure sensor location
 repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 repopick 320774 # Settings: Fix hardcoded black text in storage summary
 repopick 320776 # Settings: Drop custom preferenceFragmentCompatStyle
@@ -219,14 +194,7 @@ repopick 322836 # Allow using alternative (higher) SBC HD bitrates with a proper
 # system/netd
 repopick 320592 -P system/netd # Ignore netd errors for < 4.9 kernels
 
-# tools/extract-utils
-repopick 320992 # extract_utils: allow overriding package name
-repopick 320993 # extract_utils: disable strip for ELF binaries as well
-repopick 320994 # extract_utils: do not cut off extension for cc_binary_prebuilt
-repopick 322474 # extract-utils: automatically prepend manifest_ to vintf manifests that don't have it
-
 ## vendor/lineage
-repopick 321907 # config: Delete perf permission
 repopick 318283 # overlay: core: Remove accent color overrides
 repopick 317788 # overlay: Enable monet
 repopick 317981 # device_config: Save discrete app op history for more permissions
@@ -235,9 +203,5 @@ repopick -f 318087 # lineage: Disable privapp permission enforcement (make it lo
 repopick -f 318088 # adb insecure by default
 repopick -f 318084 # lineage: Moar fontz
 repopick -f 318085 # lineage: Update default wallpaper for 19.0
-
-# -------------- TOPIC STUFF --------------
-# still needs to be ported
-# repopick -t eleven-fastcharge
 
 exit 0
