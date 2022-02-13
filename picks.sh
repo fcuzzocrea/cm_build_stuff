@@ -174,6 +174,7 @@ repopick 322838 # SBC Dual Channel (SBC HD Audio) support
 
 # packages/apps/Settings
 repopick 321051 # Settings: Add advanced restart switch
+repopick 322884 # Settings: Add peak refresh rate list preference
 repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 repopick 320774 # Settings: Fix hardcoded black text in storage summary
 repopick 320776 # Settings: Drop custom preferenceFragmentCompatStyle
