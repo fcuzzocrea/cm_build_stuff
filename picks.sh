@@ -18,9 +18,7 @@ source build/envsetup.sh
 
 # device/lineage/sepolicy
 repopick 319293 # Reenable camera allow- and excludelist property labels
-repopick 319592 # Reenable persist.vendor.recovery_update
 repopick 322576 # common: Label IUdfpsSensor
-repopick 321910 # sepolicy: Drop Lineage performance policy
 
 # device/samsung_slsi/sepolicy
 repopick 323075 # mobicore: label mcDriverDaemon
@@ -32,6 +30,7 @@ repopick 323081 # common: label gpsd
 repopick 323310 # common: label widevine/clearkey DRM hals
 repopick 323311 # common: label keymaster HAL
 repopick 323312 # common: label graphics files
+repopick 324733 # common: label NFC HAL
 
 # device/samsung/herolte
 repopick 320464 # herolte: remove liboemcrypto
@@ -96,9 +95,10 @@ repopick 320466 # arch/arm64: configs: disable CONFIG_RT_GROUP_SCHED
 # -------------- PLATFORM STUFF --------------
 
 # art
-repopick 318097 -P art # art: Conditionally remove version check for memfd_create()
+repopick 318097 -P -f art # art: Conditionally remove version check for memfd_create()
 
-# build
+# bootable/recovery
+repopick 322986 # recovery: Add logcat to deps
 
 # build/make
 repopick -f 318081 # Sorry bro: 6 -> 3
@@ -107,55 +107,29 @@ repopick -f 318081 # Sorry bro: 6 -> 3
 repopick 320142 # Add dumpvars for WITH_EXYNOS_BSP
 repopick 317133 # soong: Add equivalent for LOCAL_EXPORT_CFLAGS
 
+# external/libncurses
+repopick 322932 # libncurses: Convert to Android.bp
+repopick 322933 # libncurses: Mark as recovery_available
+
+# external/nano
+repopick 323228 # nano: Move to Android.bp
+repopick 323229 # nano: Add support for recovery
+
 # frameworks/base
-repopick 320839 # PhoneWindowManager: add LineageButtons volumekey hook
-repopick 320840 # Long-press power while display is off for torch
-repopick 320841 # Reimplement hardware keys custom rebinding
-repopick 320842 # Reimplement device hardware wake keys support
-repopick 320843 # PhoneWindowManager: Tap volume buttons to answer call
-repopick 320844 # PhoneWindowManager: Implement press home to answer call
-repopick 320845 # fw/b: Allow customisation of navbar app switch long press action
-repopick 320846 # PhoneWindowManager: Allow torch and track skip during ambient display
-repopick 320847 # fw/b torch: Let long press power turn torch off when screen is on.
-repopick 320848 # Implement edge long swipe gesture [1/3]
-repopick 317412 # SystemUI: add FloatingRotationButton for hw-key devices
-repopick 321274 # SystemUI: don't show FRB when IME is visible
-repopick 320849 # PhoneWindowManager: Add support for back key long press customization
-repopick 320853 # Don't pass repeated back key events to app if custom action is set up
-repopick 320850 # PhoneWindowManager: Forward port long press back to kill app
-repopick 320851 # Use custom flag for edge long swipe gesture
-repopick 320856 # Forward port 'Swap volume buttons' (1/3)
-repopick 320857 # Camera button support
-repopick 320860 # Add support for runtime toggle of navbar
-repopick 320896 # fw/b: Button backlight brightness
-repopick 320897 # PowerManagerService: Allow to light up buttons only when pressed
-repopick 320898 # PowerManager: Allow to distinguish different keypresses
-repopick 320904 # fwb: Re-introduce keyboard backlight brightness control
+repopick 325327 # frameworks: Add more power menu customizations
+repopick 325341 # frameworks: Add device controls shortcut to power menu
+repopick 325353 # Workaround to support low-area UDFPS on BP
+repopick 325354 # Remove navbar inset for UDFPS BiometricPrompt
 repopick 318763 # SystemUI: runtime configurable audio panel location
-repopick 321056 # frameworks: Power menu customizations
-repopick 321167 # Zygote: Fix an issue when empty the usap pool.
-repopick 321292 # Use flow layout for advanced power menu aswell
-repopick 320947 # SystemUI: Port statusbar brightness control
-repopick 317800 # Udfps: Make pressed udfp view configurable
-repopick 317799 # udfps: Implement UdfpsHbmProvider
-repopick 317801 # udfps: change window type to TYPE_DISPLAY_OVERLAY
-repopick 317802 # udfps: Allow to configure hbm overlay type
-repopick 317803 # udfps: Add support for udfps on aod without having dedicated sensor
-repopick 317943 # UdfpsController: Call onFingerDown on action down events
 repopick 321160 # Keyguard: Allow disabling fingerprint wake-and-unlock
+repopick 323992 # PackageManager: Allow build-time disabling of components
+repopick 324734 # Biometrics: Allow disabling of fingerprint cleanups
 repopick 320714 # SystemUI: add burnIn protection
 repopick 317786 # monet: Add support for monet (cam16)
 repopick 322825 # Add CHANNEL_MODE_DUAL_CHANNEL constant
 repopick 322826 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 repopick 322827 # Allow SBC as HD audio codec in Bluetooth device configuration
 repopick 322828 # Explicitly make SBC Dual Channel an optional (HD) codec
-
-# frameworks/native
-repopick 320855 # Forward port 'Swap volume buttons' (2/3)
-repopick 320894 # PowerManager.h: Define USER_ACTIVITY_FLAG values
-repopick 320895 # InputDispatcher: On keypress, deliver keycode to pokeUserActivity
-repopick 317924 # surfaceflinger: Add support for Udfps extension lib
-repopick 317944 # CompositionEngine: Request device composition for the Udfps touched layer
 
 # hardware/samsung
 repopick 320716 # AdvancedDisplay: Adapt to S style
@@ -164,21 +138,36 @@ repopick -f 304029 # samsung: doze: add standard pickup sensor support
 repopick 322878 # fingerprint: Revert "fpc: keep fpc in system-background"
 repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
 repopick 321319 # audio: add LOCAL_VENDOR_MODULE
+repopick 324857 # hidl: usb: Import gs101 USB HAL
+repopick 324858 # hidl: usb: Remove UsbGadget HAL
+repopick 324859 # hidl: usb: Remove overheat reporting
+repopick 324860 # hidl: usb: Rebrand to samsung and adjust paths
 repopick 323525 # aidl: vibrator: properly implement effects
 
 # lineage-sdk
-repopick 320854 # sdk: Move app killed toast message to main application thread
+repopick 325343 # sdk: Add device controls global action
 
 # packages/apps/Bluetooth
 repopick 322838 # SBC Dual Channel (SBC HD Audio) support
 
 # packages/apps/Settings
-repopick 321051 # Settings: Add advanced restart switch
 repopick 322884 # Settings: Add peak refresh rate list preference
 repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 repopick 320774 # Settings: Fix hardcoded black text in storage summary
 repopick 320776 # Settings: Drop custom preferenceFragmentCompatStyle
 repopick 320779 # Settings: use framework text colors for SwitchBar
+
+# packages/apps/LineageParts
+repopick 325355 # PowerMenuActions: Hide emergency action if device has no telephony
+repopick 325342 # LineageParts: Add device controls global action
+repopick 325368 # PowerMenuActions: Minor clean up
+
+# packages/apps/SetupWizard
+repopick 325324 # SUW: Import Pixel overlay resources
+repopick 325325 # SUW: Set button themes
+repopick 325326 # SUW: Redesign Welcome page based on Pixel
+repopick 324846 # SUW: Support dark mode by default
+repopick 324870 # SUW: Drop SIM card tray illustration hint all together
 
 # packages/modules/Permission
 repopick 317972 -P packages/modules/Permission # PermissionController: Enable usage timeline for all permission groups
@@ -192,10 +181,16 @@ repopick 322834 # Increase maximum Bluetooth SBC codec bitrate for SBC HD
 repopick 322835 # Explicit SBC Dual Channel (SBC HD) support
 repopick 322836 # Allow using alternative (higher) SBC HD bitrates with a property
 
+# system/logging
+repopick 322985 # logcat: Mark as recovery_available
+
 # system/netd
-repopick 320592 -P system/netd # Ignore netd errors for < 4.9 kernels
+repopick 320592 -P -f system/netd # Ignore netd errors for < 4.9 kernels
 
 ## vendor/lineage
+repopick 322935 # config: common: Build nano in recovery
+repopick 322761 # overlay: Default to night mode
+repopick 324866 # lineage: overlay: Set biometrics colors to accent.
 repopick 318283 # overlay: core: Remove accent color overrides
 repopick 317788 # overlay: Enable monet
 repopick 317981 # device_config: Save discrete app op history for more permissions
