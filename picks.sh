@@ -154,11 +154,23 @@ repopick 324504 # Messaging: remove unused drawables
 repopick 324505 # Messaging: Update checkmark PNG drawable with XML drawable
 repopick 324404 # Messaging: use Material You colors
 
+# packages/apps/Seedvault
+repopick 321755 # RestoreFiles: Use RESULT_SKIP when skipping
+repopick 321756 # Import and convert SettingsLib.Utils.getColorAccent
+repopick 321757 # Add setupcompat and setupdesign deps
+repopick 321758 # Switch to RESULT_SKIP from setupcompat library
+repopick 318008 # Seedvault: redesign SUW activities
+
 # packages/apps/Settings
+repopick 325369 # Settings: Fix the failing strings
 repopick 322884 # Settings: Add peak refresh rate list preference
 repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 
 # packages/apps/Trebuchet
+repopick 317969 # Expose themed icon setting in ThemePicker
+repopick 317967 # Enable crossfade when changing theme
+repopick 318383 # Enable local colors for popup menu items
+repopick 326714 # NavbarButtonsViewController: Support navbar layout inversion
 repopick 326988 # Trebuchet: Assume taskbar is disabled if its size is equal 0
 repopick 326714 # NavbarButtonsViewController: Support navbar layout inversion
 
@@ -184,11 +196,17 @@ repopick 322834 # Increase maximum Bluetooth SBC codec bitrate for SBC HD
 repopick 322835 # Explicit SBC Dual Channel (SBC HD) support
 repopick 322836 # Allow using alternative (higher) SBC HD bitrates with a property
 
+# system/core
+repopick 317912 # init: Don't run update_sys_usb_config if /data isn't mounted
+
 # system/logging
 repopick 322985 # logcat: Mark as recovery_available
 
 # system/netd
 repopick 320592 -f -P system/netd # Ignore netd errors for < 4.9 kernels
+
+# system/update_engine
+repopick 325499 # Force PrepareSnapshotPartitionsForUpdate to fail in recovery
 
 ## vendor/lineage
 repopick 327105 # overlay: Move config_globallyDisabledComponents to the new location
