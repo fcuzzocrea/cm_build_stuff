@@ -16,9 +16,6 @@ source build/envsetup.sh
 
 # -------------- DEVICE STUFF --------------
 
-# device/lineage/sepolicy
-repopick 322576 # common: Label IUdfpsSensor
-
 # device/samsung_slsi/sepolicy
 repopick 323075 # mobicore: label mcDriverDaemon
 repopick 323077 # common: label lhd
@@ -96,9 +93,6 @@ repopick 324733 # common: label NFC HAL
 # bootable/recovery
 repopick 322986 # recovery: Add logcat to deps
 
-# build/make
-repopick -f 318081 # Sorry bro: 6 -> 3
-
 # build/soong
 repopick 320142 # Add dumpvars for WITH_EXYNOS_BSP
 
@@ -115,10 +109,9 @@ repopick 318763 # SystemUI: runtime configurable audio panel location
 repopick 323013 # VolumeDialog: Display default row when active row is notification
 repopick 323014 # VolumeDialog: Don't hide the default stream when adjusting the music stream
 repopick 323015 # VolumeDialog: Make the dialog expandable
+repopick 326160 # frameworks: Exempt location packages from location indicators
 repopick 326990 # SystemUI: Move KEY_NAVIGATION_HINT handling to NavigationBarController
 repopick 326160 # frameworks: Exempt location packages from location indicators
-repopick 321160 # Keyguard: Allow disabling fingerprint wake-and-unlock
-repopick 323992 # PackageManager: Allow build-time disabling of components
 repopick 324734 # Biometrics: Allow disabling of fingerprint cleanups
 repopick 320714 # SystemUI: add burnIn protection
 repopick 322825 # Add CHANNEL_MODE_DUAL_CHANNEL constant
@@ -137,22 +130,12 @@ repopick 323525 # aidl: vibrator: properly implement effects
 repopick 327003 # samsung: doze: add standard pickup sensor support
 
 # lineage-sdk
-repopick 325899 # res: Introduce config to allow build-time disabling of components
 
 # packages/apps/Bluetooth
 repopick 322838 # SBC Dual Channel (SBC HD Audio) support
 
-# packages/apps/Dialer
-repopick 324509 # Dialer: remove unused drawables
-repopick 324510 # Dialer: Material You
-
 # packages/apps/LineageParts
 repopick 325368 # PowerMenuActions: Minor clean up
-
-# packages/apps/Messaging
-repopick 324504 # Messaging: remove unused drawables
-repopick 324505 # Messaging: Update checkmark PNG drawable with XML drawable
-repopick 324404 # Messaging: use Material You colors
 
 # packages/apps/Seedvault
 repopick 321755 # RestoreFiles: Use RESULT_SKIP when skipping
@@ -163,7 +146,6 @@ repopick 318008 # Seedvault: redesign SUW activities
 
 # packages/apps/Settings
 repopick 325369 # Settings: Fix the failing strings
-repopick 322884 # Settings: Add peak refresh rate list preference
 repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 
 # packages/apps/Trebuchet
@@ -173,13 +155,6 @@ repopick 318383 # Enable local colors for popup menu items
 repopick 326714 # NavbarButtonsViewController: Support navbar layout inversion
 repopick 326988 # Trebuchet: Assume taskbar is disabled if its size is equal 0
 repopick 326714 # NavbarButtonsViewController: Support navbar layout inversion
-
-# packages/inputmethods/LatinIME
-repopick 325437 # LatinIME: remove unused drawables
-repopick 325405 # LatinIME: fit more emoji in a page
-repopick 325438 # LatinIME: show emoji key when language switch key is not shown
-repopick 325748 # LatinIME: add attr for vertical hint padding
-repopick 325406 # LatinIME: Initial You
 
 # packages/modules/Permission
 repopick 317972 -P packages/modules/Permission # PermissionController: Enable usage timeline for all permission groups
@@ -205,13 +180,9 @@ repopick 322985 # logcat: Mark as recovery_available
 # system/netd
 repopick 320592 -f -P system/netd # Ignore netd errors for < 4.9 kernels
 
-# system/update_engine
-repopick 325499 # Force PrepareSnapshotPartitionsForUpdate to fail in recovery
-
 ## vendor/lineage
-repopick 327105 # overlay: Move config_globallyDisabledComponents to the new location
-repopick 322935 # config: common: Build nano in recovery
 repopick 326374 # device_config: Show setting to disable location indicators
+repopick 322935 # config: common: Build nano in recovery
 repopick 317981 # device_config: Save discrete app op history for more permissions
 repopick 317982 # device_config: Keep up to 7 days of permission usage history
 repopick -f 318087 # lineage: Disable privapp permission enforcement (make it log)
