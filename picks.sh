@@ -16,18 +16,6 @@ source build/envsetup.sh
 
 # -------------- DEVICE STUFF --------------
 
-# device/samsung_slsi/sepolicy
-repopick 323075 # mobicore: label mcDriverDaemon
-repopick 323077 # common: label lhd
-repopick 323078 # common: label partitions for older models
-repopick 323079 # common: label samsung GNSS HAL
-repopick 323080 # common: label macloader
-repopick 323081 # common: label gpsd
-repopick 323310 # common: label widevine/clearkey DRM hals
-repopick 323311 # common: label keymaster HAL
-repopick 323312 # common: label graphics files
-repopick 324733 # common: label NFC HAL
-
 # device/samsung/herolte
 # repopick 320464 # herolte: remove liboemcrypto
 # repopick 320463 # herolte: init: fix include path
@@ -105,9 +93,9 @@ repopick 323228 # nano: Move to Android.bp
 repopick 323229 # nano: Add support for recovery
 
 # frameworks/base
-repopick 318763 # SystemUI: runtime configurable audio panel location
-repopick 323013 # VolumeDialog: Display default row when active row is notification
+repopick 327610 # VolumeDialogImpl: Respect multiple visible rows in landscape
 repopick 323014 # VolumeDialog: Don't hide the default stream when adjusting the music stream
+repopick 318763 # SystemUI: runtime configurable audio panel location
 repopick 323015 # VolumeDialog: Make the dialog expandable
 repopick 326160 # frameworks: Exempt location packages from location indicators
 repopick 326990 # SystemUI: Move KEY_NAVIGATION_HINT handling to NavigationBarController
@@ -122,15 +110,11 @@ repopick 322828 # Explicitly make SBC Dual Channel an optional (HD) codec
 # hardware/samsung
 repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
 repopick 321319 # audio: add LOCAL_VENDOR_MODULE
-repopick 324857 # hidl: usb: Import gs101 USB HAL
-repopick 324858 # hidl: usb: Remove UsbGadget HAL
-repopick 324859 # hidl: usb: Remove overheat reporting
-repopick 324860 # hidl: usb: Rebrand to samsung and adjust paths
-repopick 323525 # aidl: vibrator: properly implement effects
 repopick 327003 # samsung: doze: add standard pickup sensor support
 
 # lineage-sdk
-
+repopick 327684 # lineage: res: Introduce config to disable biometrics success haptic feedback
+repopick 327685 # lineage-sdk: Add preference keys for biometrics success haptic feedback
 # packages/apps/Bluetooth
 repopick 322838 # SBC Dual Channel (SBC HD Audio) support
 
