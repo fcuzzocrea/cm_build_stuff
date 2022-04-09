@@ -93,10 +93,6 @@ repopick 323228 # nano: Move to Android.bp
 repopick 323229 # nano: Add support for recovery
 
 # frameworks/base
-repopick 327610 # VolumeDialogImpl: Respect multiple visible rows in landscape
-repopick 323014 # VolumeDialog: Don't hide the default stream when adjusting the music stream
-repopick 318763 # SystemUI: runtime configurable audio panel location
-repopick 323015 # VolumeDialog: Make the dialog expandable
 repopick 326160 # frameworks: Exempt location packages from location indicators
 repopick 326990 # SystemUI: Move KEY_NAVIGATION_HINT handling to NavigationBarController
 repopick 326160 # frameworks: Exempt location packages from location indicators
@@ -129,7 +125,6 @@ repopick 321758 # Switch to RESULT_SKIP from setupcompat library
 repopick 318008 # Seedvault: redesign SUW activities
 
 # packages/apps/Settings
-repopick 325369 # Settings: Fix the failing strings
 repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 
 # packages/apps/Trebuchet
@@ -165,7 +160,6 @@ repopick 322985 # logcat: Mark as recovery_available
 repopick 320592 -f -P system/netd # Ignore netd errors for < 4.9 kernels
 
 ## vendor/lineage
-repopick 326374 # device_config: Show setting to disable location indicators
 repopick 322935 # config: common: Build nano in recovery
 repopick 317981 # device_config: Save discrete app op history for more permissions
 repopick 317982 # device_config: Keep up to 7 days of permission usage history
