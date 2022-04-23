@@ -96,18 +96,12 @@ repopick 323229 # nano: Add support for recovery
 repopick 326990 # SystemUI: Move KEY_NAVIGATION_HINT handling to NavigationBarController
 repopick 324734 # Biometrics: Allow disabling of fingerprint cleanups
 repopick 320714 # SystemUI: add burnIn protection
+repopick 329229 # Alter model name to avoid SafetyNet HW attestation enforcement
+repopick 329230 # keystore: Block key attestation for SafetyNet
 repopick 322825 # Add CHANNEL_MODE_DUAL_CHANNEL constant
 repopick 322826 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 repopick 322827 # Allow SBC as HD audio codec in Bluetooth device configuration
 repopick 322828 # Explicitly make SBC Dual Channel an optional (HD) codec
-repopick -g https://review.calyxos.org 9105 -f -P frameworks/base # core: Use real security patch level property
-repopick -g https://review.calyxos.org 8857 -f -P frameworks/base # Alter model name to avoid SafetyNet HW attestation enforcement
-repopick -g https://review.calyxos.org 8856 -f -P frameworks/base # keystore: Block key attestation for SafetyNet
-
-# hardware/samsung
-repopick 320717 # audio: remove AUDIO_DEVICE_OUT_ALL_SCO from switch case
-repopick 321319 # audio: add LOCAL_VENDOR_MODULE
-repopick 328785 # aidl: vibrator: Don't allow intensity 0
 
 # lineage-sdk
 repopick 327684 # lineage: res: Introduce config to disable biometrics success haptic feedback
@@ -124,14 +118,6 @@ repopick 326739 # Trust: Add option to always disable USB gadgets
 # packages/apps/Settings
 repopick 327433 # Settings: Don't hide gesture navigation settings
 repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
-
-# packages/apps/Trebuchet
-repopick 317969 # Expose themed icon setting in ThemePicker
-repopick 317967 # Enable crossfade when changing theme
-repopick 318383 # Enable local colors for popup menu items
-repopick 326714 # NavbarButtonsViewController: Support navbar layout inversion
-repopick 326988 # Trebuchet: Assume taskbar is disabled if its size is equal 0
-repopick 326714 # NavbarButtonsViewController: Support navbar layout inversion
 
 # packages/modules/Permission
 repopick 317972 -P packages/modules/Permission # PermissionController: Enable usage timeline for all permission groups
@@ -150,10 +136,6 @@ repopick 322836 # Allow using alternative (higher) SBC HD bitrates with a proper
 
 # system/core
 repopick 317912 # init: Don't run update_sys_usb_config if /data isn't mounted
-repopick -g https://review.calyxos.org 8859 -f -P system/core # init: Report valid verified boot for SafetyNet checks
-repopick -g https://review.calyxos.org 9014 -f -P system/core # init: Make SafetyNet property setting conditional on build variant
-repopick -g https://review.calyxos.org 9108 -f -P system/core # init: Only override verified boot state when it's yellow
-repopick -g https://review.calyxos.org 9149 -f -P system/core # init: Don't check androidboot.mode to detect recovery boot
 
 # system/logging
 repopick 322985 # logcat: Mark as recovery_available
