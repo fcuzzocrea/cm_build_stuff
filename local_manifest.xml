@@ -24,9 +24,11 @@
   <!-- x1s -->
   <project name="Exynoobs/android_device_samsung_exynos990-common" path="device/samsung/exynos990-common" remote="github-personal"/>
   <project name="Exynoobs/android_device_samsung_x1s" path="device/samsung/x1s" remote="github-personal"/>
+  <project name="Exynoobs/android_device_samsung_x1slte" path="device/samsung/x1slte" remote="github-personal"/>  
   <project name="Exynoobs/android_kernel_samsung_exynos990" path="kernel/samsung/exynos990" remote="github-personal"/>
   <project name="Exynoobs/proprietary_vendor_samsung_exynos990-common" path="vendor/samsung/exynos990-common" remote="github-personal"/>
   <project name="Exynoobs/proprietary_vendor_samsung_x1s" path="vendor/samsung/x1s" remote="github-personal"/>
+    <project name="Exynoobs/proprietary_vendor_samsung_x1slte" path="vendor/samsung/x1slte" remote="github-personal"/>
   <!-- Personal Stuff -->
   <project name="luk1337/ih8sn" path="external/ih8sn" revision="master" />
   <!-- <project name="npjohnson/android_packages_apps_Launcher3" path="packages/apps/Launcher3" /> -->
