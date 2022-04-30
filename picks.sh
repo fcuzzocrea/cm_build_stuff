@@ -76,6 +76,14 @@ source build/envsetup.sh
 # kernel/samsung/universal8890
 # repopick 320466 # arch/arm64: configs: disable CONFIG_RT_GROUP_SCHED
 
+# device/lineage/sepolicy
+repopick 330086 # sepolicy: add hal_lineage_batterylifeextender
+repopick 330087 # sepolicy: add super fast charge interface
+
+# device/samsung_slsi/sepolicy
+repopick 330091 # sepolicy: add hal_lineage_batterylifeextender
+repopick 330092 # sepolicy: add policy for super fast charge
+
 # -------------- PLATFORM STUFF --------------
 
 # bootable/recovery
@@ -103,6 +111,15 @@ repopick 322826 # Add Dual Channel into Bluetooth Audio Channel Mode developer o
 repopick 322827 # Allow SBC as HD audio codec in Bluetooth device configuration
 repopick 322828 # Explicitly make SBC Dual Channel an optional (HD) codec
 
+# hardware/lineage/interfaces
+repopick 330084 # lineage/interfaces: add batterylifeextender HAL
+repopick 330085 # fastcharge: add super fast charge support
+
+# hardware/samsung
+repopick 330094 # hidl: add batterylifeextender implementation
+repopick 330095 # fastcharge: move 1.0 impl to separate folder
+repopick 330096 # hidl: fastcharge: add 1.1 impl
+
 # lineage-sdk
 repopick 327684 # lineage: res: Introduce config to disable biometrics success haptic feedback
 repopick 327685 # lineage-sdk: Add preference keys for biometrics success haptic feedback
@@ -118,6 +135,8 @@ repopick 326739 # Trust: Add option to always disable USB gadgets
 # packages/apps/Settings
 repopick 327433 # Settings: Don't hide gesture navigation settings
 repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
+repopick 330082 # Settings: add Protect battery toggle
+repopick 330082 # Settings: add super fast charge toggle
 
 # packages/modules/Permission
 repopick 317972 -P packages/modules/Permission # PermissionController: Enable usage timeline for all permission groups
