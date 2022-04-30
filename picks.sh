@@ -136,7 +136,7 @@ repopick 326739 # Trust: Add option to always disable USB gadgets
 repopick 327433 # Settings: Don't hide gesture navigation settings
 repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
 repopick 330082 # Settings: add Protect battery toggle
-repopick 330082 # Settings: add super fast charge toggle
+repopick 330083 # Settings: add super fast charge toggle
 
 # packages/modules/Permission
 repopick 317972 -P packages/modules/Permission # PermissionController: Enable usage timeline for all permission groups
