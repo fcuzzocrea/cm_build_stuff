@@ -77,96 +77,70 @@ source build/envsetup.sh
 # repopick 320466 # arch/arm64: configs: disable CONFIG_RT_GROUP_SCHED
 
 # device/lineage/sepolicy
-repopick 330086 # sepolicy: add hal_lineage_batterylifeextender
 repopick 330087 # sepolicy: add super fast charge interface
 
 # device/samsung_slsi/sepolicy
-repopick 330091 # sepolicy: add hal_lineage_batterylifeextender
 repopick 330092 # sepolicy: add policy for super fast charge
 
 # -------------- PLATFORM STUFF --------------
 
-# bootable/recovery
-repopick 322986 # recovery: Add logcat to deps
-
 # build/soong
 repopick 320142 # Add dumpvars for WITH_EXYNOS_BSP
 
-# external/libncurses
-repopick 322932 # libncurses: Convert to Android.bp
-repopick 322933 # libncurses: Mark as recovery_available
-
-# external/nano
-repopick 323228 # nano: Move to Android.bp
-repopick 323229 # nano: Add support for recovery
-
 # frameworks/base
-repopick 326990 # SystemUI: Move KEY_NAVIGATION_HINT handling to NavigationBarController
-repopick 324734 # Biometrics: Allow disabling of fingerprint cleanups
+repopick 329326 # SystemUI: Bring in drawables for statusbar icon toggles
+repopick 331389 # SystemUI: Make QS panel change on UI mode changes
+repopick 331390 # Revert "Do not re-inflate QS and SB when CONFIG_UI_MODE"
+repopick 331391 # SystemUI: Follow light/dark theme in quick settings
+repopick 331392 # SystemUI: Initialize QS tiles in inactive state
+repopick 331393 # SystemUI: Add dual-tone light and dark themes for QS
+repopick 331770 # SystemUI: Fix QS clock overlapping on UI mode change
+repopick 331914 # SystemUI: Calculate paged QS tiles height properly
+repopick 331545 # SystemUI: Always refresh power menu on UI mode change
+repopick 331665 # SystemUI: Re-evaluate system theme on UI mode change
+repopick 331671 # SystemUI: Collapse QS panel on UI mode change
 repopick 320714 # SystemUI: add burnIn protection
-repopick 329229 # Alter model name to avoid SafetyNet HW attestation enforcement
-repopick 329230 # keystore: Block key attestation for SafetyNet
-repopick 322825 # Add CHANNEL_MODE_DUAL_CHANNEL constant
-repopick 322826 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
-repopick 322827 # Allow SBC as HD audio codec in Bluetooth device configuration
-repopick 322828 # Explicitly make SBC Dual Channel an optional (HD) codec
+repopick -f 329229 # Alter model name to avoid SafetyNet HW attestation enforcement
+repopick -f 329230 # keystore: Block key attestation for SafetyNet
 
 # hardware/lineage/interfaces
-repopick 330084 # lineage/interfaces: add batterylifeextender HAL
 repopick 330085 # fastcharge: add super fast charge support
 
 # hardware/samsung
-repopick 330094 # hidl: add batterylifeextender implementation
 repopick 330095 # fastcharge: move 1.0 impl to separate folder
 repopick 330096 # hidl: fastcharge: add 1.1 impl
 
 # lineage-sdk
 repopick 327684 # lineage: res: Introduce config to disable biometrics success haptic feedback
 repopick 327685 # lineage-sdk: Add preference keys for biometrics success haptic feedback
-# packages/apps/Bluetooth
-repopick 322838 # SBC Dual Channel (SBC HD Audio) support
+
+# packages/apps/Camera2
+repopick 330701 # Camera2: import quickReader module from Snap
+repopick 330702 # Camera2: add QR code launcher shortcut
+repopick 331508 # Camera2: add QR scanner QS tile
 
 # packages/apps/LineageParts
 repopick 325368 # PowerMenuActions: Minor clean up
-
-# packages/apps/LineageParts
 repopick 326739 # Trust: Add option to always disable USB gadgets
 
 # packages/apps/Settings
-repopick 327433 # Settings: Don't hide gesture navigation settings
-repopick 322833 # Add Dual Channel into Bluetooth Audio Channel Mode developer options menu
-repopick 330082 # Settings: add Protect battery toggle
 repopick 330083 # Settings: add super fast charge toggle
 
 # packages/modules/Permission
-repopick 317972 -P packages/modules/Permission # PermissionController: Enable usage timeline for all permission groups
 repopick 317973 -P packages/modules/Permission # PermissionController: Show up to 7 days of permission usage history
-
-# packages/overlays/Lineage
-repopick 326989 # NavigationBarNoHint: Set taskbar_frame_height to 0dp
 
 # system/bpf
 repopick 320591 -f -P system/bpf # Ignore bpf errors for < 4.9 kernels
 
-# system/bt
-repopick 322834 # Increase maximum Bluetooth SBC codec bitrate for SBC HD
-repopick 322835 # Explicit SBC Dual Channel (SBC HD) support
-repopick 322836 # Allow using alternative (higher) SBC HD bitrates with a property
-
 # system/core
 repopick 317912 # init: Don't run update_sys_usb_config if /data isn't mounted
-
-# system/logging
-repopick 322985 # logcat: Mark as recovery_available
 
 # system/netd
 repopick 320592 -f -P system/netd # Ignore netd errors for < 4.9 kernels
 
-## vendor/lineage
-repopick 322935 # config: common: Build nano in recovery
-repopick 317981 # device_config: Save discrete app op history for more permissions
+# vendor/lineage
+repopick 331544 # overlay: SystemUI: Follow light/dark theme in power menu
 repopick 317982 # device_config: Keep up to 7 days of permission usage history
-repopick 328170 # config: Disable remote keyguard animation until it's fixed
 repopick -f 318087 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f 318088 # adb insecure by default
 
