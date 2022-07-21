@@ -88,17 +88,13 @@ repopick 330092 # sepolicy: add policy for super fast charge
 repopick 320142 # Add dumpvars for WITH_EXYNOS_BSP
 
 # frameworks/base
-repopick 329326 # SystemUI: Bring in drawables for statusbar icon toggles
-repopick 331389 # SystemUI: Make QS panel change on UI mode changes
-repopick 331390 # Revert "Do not re-inflate QS and SB when CONFIG_UI_MODE"
-repopick 331391 # SystemUI: Follow light/dark theme in quick settings
-repopick 331392 # SystemUI: Initialize QS tiles in inactive state
-repopick 331393 # SystemUI: Add dual-tone light and dark themes for QS
-repopick 331770 # SystemUI: Fix QS clock overlapping on UI mode change
-repopick 331914 # SystemUI: Calculate paged QS tiles height properly
-repopick 331545 # SystemUI: Always refresh power menu on UI mode change
-repopick 331665 # SystemUI: Re-evaluate system theme on UI mode change
-repopick 331671 # SystemUI: Collapse QS panel on UI mode change
+repopick 333577 # Keyguard: Allow user configurable fingerprint wake-and-unlock
+repopick 334005 # SystemUI: Redo circle battery style
+repopick 334388 # SystemUI: Fix QS header clock color
+repopick 334281 # SystemUI: Fix QS mobile icon disappearing on theme switch
+repopick 333509 # Wallpaper: Make ImageWallpaper zooming tunable
+repopick 328270 # fixup! Implement backup/restore for network policy
+repopick 328271 # Add custom handling for backup/restore of UIDS_ALLOWED_ON_RESTRICTED_NETWORKS
 repopick 320714 # SystemUI: add burnIn protection
 repopick -f 329229 # Alter model name to avoid SafetyNet HW attestation enforcement
 repopick -f 329230 # keystore: Block key attestation for SafetyNet
@@ -111,19 +107,15 @@ repopick 330095 # fastcharge: move 1.0 impl to separate folder
 repopick 330096 # hidl: fastcharge: add 1.1 impl
 
 # lineage-sdk
+repopick 333576 # sdk: Add FINGERPRINT_WAKE_UNLOCK setting
 repopick 327684 # lineage: res: Introduce config to disable biometrics success haptic feedback
+repopick 333507 # sdk: Add wallpaper zooming setting
 repopick 327685 # lineage-sdk: Add preference keys for biometrics success haptic feedback
 
-# packages/apps/Camera2
-repopick 330701 # Camera2: import quickReader module from Snap
-repopick 330702 # Camera2: add QR code launcher shortcut
-repopick 331508 # Camera2: add QR scanner QS tile
-
-# packages/apps/LineageParts
-repopick 325368 # PowerMenuActions: Minor clean up
-repopick 326739 # Trust: Add option to always disable USB gadgets
-
 # packages/apps/Settings
+repopick 333578 # Settings: Allow user configurable fingerprint wake-and-unlock
+repopick 332673 # Settings: Protect sensitive data on the about phone
+repopick 333508 # Settings: Add preference for toggling the wallpaper zooming animation
 repopick 330083 # Settings: add super fast charge toggle
 
 # packages/modules/Permission
@@ -132,14 +124,10 @@ repopick 317973 -P packages/modules/Permission # PermissionController: Show up t
 # system/bpf
 repopick 320591 -f -P system/bpf # Ignore bpf errors for < 4.9 kernels
 
-# system/core
-repopick 317912 # init: Don't run update_sys_usb_config if /data isn't mounted
-
 # system/netd
 repopick 320592 -f -P system/netd # Ignore netd errors for < 4.9 kernels
 
 # vendor/lineage
-repopick 331544 # overlay: SystemUI: Follow light/dark theme in power menu
 repopick 317982 # device_config: Keep up to 7 days of permission usage history
 repopick -f 318087 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f 318088 # adb insecure by default
