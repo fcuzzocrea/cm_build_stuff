@@ -88,6 +88,14 @@ repopick 330092 # sepolicy: add policy for super fast charge
 repopick 320142 # Add dumpvars for WITH_EXYNOS_BSP
 
 # frameworks/base
+repopick 332891 # SystemUI: VolumeDialogImpl: Show output button if there is an active stream
+repopick 334527 # SystemUI: VolumeDialogImpl: Move the MediaOutputDialog above status bar
+repopick 334590 # SystemUI: VolumeDialogImpl: notifyVisible after the volume panel is fully hidden
+repopick 334591 # SystemUI: VolumeDialogImpl: Change bg tint for inactive rows
+repopick 331626 # Make ringtone/notification volume steps configurable
+repopick 331627 # SystemUI: Apply monet to fingerprint authentication ripple animation
+repopick 331628 # styles: Use user fonts for Material UI themes
+repopick 334635 # Partially revert "Wake up to lock screen when bouncer is visible"
 repopick 333577 # Keyguard: Allow user configurable fingerprint wake-and-unlock
 repopick 334005 # SystemUI: Redo circle battery style
 repopick 334388 # SystemUI: Fix QS header clock color
@@ -99,6 +107,9 @@ repopick 320714 # SystemUI: add burnIn protection
 repopick -f 329229 # Alter model name to avoid SafetyNet HW attestation enforcement
 repopick -f 329230 # keystore: Block key attestation for SafetyNet
 
+# frameworks/opt/telephony
+repopick 334823 # telephony: Disable handling audio direction changes on IMS calls.
+
 # hardware/lineage/interfaces
 repopick 330085 # fastcharge: add super fast charge support
 
@@ -107,16 +118,23 @@ repopick 330095 # fastcharge: move 1.0 impl to separate folder
 repopick 330096 # hidl: fastcharge: add 1.1 impl
 
 # lineage-sdk
-repopick 333576 # sdk: Add FINGERPRINT_WAKE_UNLOCK setting
 repopick 327684 # lineage: res: Introduce config to disable biometrics success haptic feedback
 repopick 333507 # sdk: Add wallpaper zooming setting
 repopick 327685 # lineage-sdk: Add preference keys for biometrics success haptic feedback
+repopick 334822 # telephony: Add config to control handling of audio direction changes.
+
+# packages/apps/LineageParts
+repopick 335421 # LineageParts: Rewrite ButtonSettings to support feature exclusion
+repopick 335422 # LineageParts: Buttons: Disable split screen option ...
 
 # packages/apps/Settings
 repopick 333578 # Settings: Allow user configurable fingerprint wake-and-unlock
 repopick 332673 # Settings: Protect sensitive data on the about phone
 repopick 333508 # Settings: Add preference for toggling the wallpaper zooming animation
 repopick 330083 # Settings: add super fast charge toggle
+
+# packages/apps/Trebuchet
+repopick 335411 # Trebuchet: Don't show split screen options ...
 
 # packages/modules/Permission
 repopick 317973 -P packages/modules/Permission # PermissionController: Show up to 7 days of permission usage history
