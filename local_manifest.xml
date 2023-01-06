@@ -7,6 +7,9 @@
     <linkfile src="picks.sh" dest="picks.sh" />
   </project>
 
+  <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" revision="lineage-20"/>
+  <project name="LineageOS/android_device_samsung_slsi_sepolicy" path="device/samsung_slsi/sepolicy" remote="github" revision="lineage-20"/>
+
   <!-- x1s -->
   <project name="Exynoobs/android_device_samsung_exynos990-common" path="device/samsung/exynos990-common" remote="github-personal" revision="lineage-20"/>
   <project name="Exynoobs/android_device_samsung_x1slte" path="device/samsung/x1slte" remote="github-personal" revision="lineage-20"/>  
@@ -17,6 +20,6 @@
   <!-- Personal Stuff -->
   <project name="luk1337/ih8sn" path="external/ih8sn" revision="master" />
   <!-- <project name="npjohnson/android_packages_apps_Launcher3" path="packages/apps/Launcher3" /> -->
-  <!--  <project name="fcuzzocrea/android_vendor_extra" path="vendor/extra" remote="github-personal"/> -->
+  <project name="fcuzzocrea/android_vendor_extra" path="vendor/extra" remote="github-personal"/>
   <project name="android/proprietary_vendor_google_pixel" path="vendor/google_pixel" remote="oddsolutions"/>
 </manifest>
