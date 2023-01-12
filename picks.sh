@@ -17,6 +17,7 @@ source build/envsetup.sh
 # -------------- DEVICE STUFF --------------
 
 # device/lineage/sepolicy
+repopick 345753 # teegris: Label /dev/tziwshmem
 # repopick 330087 # sepolicy: add super fast charge interface # To be pushed to 20
 
 # device/samsung_slsi/sepolicy
