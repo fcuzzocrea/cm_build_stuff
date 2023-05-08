@@ -16,7 +16,7 @@
   <project name="LineageOS/android_hardware_samsung_slsi-linaro_config" path="hardware/samsung_slsi-linaro/config" remote="github" revision="lineage-20"/>
 
   <!-- x1s -->
-  <project name="fcuzzocrea/android_device_samsung_universal990-common" path="device/samsung/universal-common" remote="github-personal" revision="lineage-20"/>
+  <project name="fcuzzocrea/android_device_samsung_universal990-common" path="device/samsung/universal990-common" remote="github-personal" revision="lineage-20"/>
   <project name="fcuzzocrea/android_device_samsung_x1slte" path="device/samsung/x1slte" remote="github-personal" revision="lineage-20"/>  
   <project name="fcuzzocrea/android_kernel_samsung_universal990" path="kernel/samsung/universal" remote="github-personal" revision="lineage-20"/>
   <project name="fcuzzocrea/proprietary_vendor_samsung_universal990-common" path="vendor/samsung/universal990-common" remote="github-personal" revision="lineage-20"/>
