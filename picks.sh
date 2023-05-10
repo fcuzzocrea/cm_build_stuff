@@ -34,8 +34,9 @@ repopick -f 334344 # keystore: Block key attestation for SafetyNet
 # repopick 330085 # fastcharge: add super fast charge support # To be pushed to 20
 
 # hardware/samsung
-repopick 351016 # aidl: vibrator: Only handle actually supported effects
-repopick 351017 # aidl: vibrator: Add click and tick duration config properties
+repopick 355271 # vibrator: Re-implement TEXTURE_TICK effect
+repopick 356121 # vibrator: Add support for duration based amplitude control
+repopick 356122 # vibrator: Change default effect durations
 # repopick 330095 # fastcharge: move 1.0 impl to separate folder # To be pushed to 20
 # repopick 330096 # hidl: fastcharge: add 1.1 impl # To be pushed to 20
 
