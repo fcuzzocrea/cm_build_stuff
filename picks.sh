@@ -17,8 +17,7 @@ source build/envsetup.sh
 # -------------- DEVICE STUFF --------------
 
 # device/lineage/sepolicy
-repopick 351271 # common: Add policy for hwc3
-# repopick 330092 # sepolicy: add policy for super fast charge # To be pushed to 20
+repopick 357348 # sepolicy: add policy for super fast charge
 
 # -------------- PLATFORM STUFF --------------
 
@@ -31,25 +30,19 @@ repopick -f 334343 # Alter model name to avoid SafetyNet HW attestation enforcem
 repopick -f 334344 # keystore: Block key attestation for SafetyNet
 
 # hardware/lineage/interfaces
-# repopick 330085 # fastcharge: add super fast charge support # To be pushed to 20
+repopick 357349 # fastcharge: add super fast charge support
 
 # hardware/samsung
-repopick 355271 # vibrator: Re-implement TEXTURE_TICK effect
-repopick 356121 # vibrator: Add support for duration based amplitude control
-repopick 356122 # vibrator: Change default effect durations
-# repopick 330095 # fastcharge: move 1.0 impl to separate folder # To be pushed to 20
-# repopick 330096 # hidl: fastcharge: add 1.1 impl # To be pushed to 20
+repopick 357350 # fastcharge: move 1.0 impl to separate folder
+repopick 357351 # hidl: fastcharge: add 1.1 impl
 
 # packages/apps/Settings
-# repopick 330083 # Settings: add super fast charge toggle # To be pushed to 20
-
-# packages/apps/Trebuchet
+repopick 357352 # Settings: add super fast charge toggle
 
 # system/core
 repopick -f 334348 # init: Set properties to make SafetyNet pass
 
 # vendor/lineage
-repopick 351331 # overlay: Disable immersive mode confirmation
 repopick -f 334345 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f 334346 # adb insecure by default
 
