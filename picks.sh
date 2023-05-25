@@ -36,6 +36,7 @@ repopick -f 353215 # Limit SafetyNet workarounds to unstable GMS process
 repopick -f 353216 # gmscompat: Apply the SafetyNet workaround to Play Store aswell
 repopick -f 353217 # gmscompat: Use Nexus 6P fingerprint for CTS/Integrity
 repopick -f 353218 # gmscompat: Make CTS/Play Integrity pass again
+repopick -f 357510 # gmscompat: also spoof props for samsung/sec apps
 
 # hardware/lineage/interfaces
 repopick 357349 # fastcharge: add super fast charge support
