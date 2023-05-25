@@ -16,6 +16,9 @@ source build/envsetup.sh
 
 # -------------- DEVICE STUFF --------------
 
+# device/samsung_slsi/sepolicy
+repopick 357508 # sepolicy: add policy for super fast charge
+
 # device/lineage/sepolicy
 repopick 357348 # sepolicy: add policy for super fast charge
 
