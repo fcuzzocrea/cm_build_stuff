@@ -31,9 +31,11 @@ repopick -f 334342 # Sorry bro: 6 -> 3
 repopick 340916 # SystemUI: add burnIn protection
 repopick -f 334343 # Alter model name to avoid SafetyNet HW attestation enforcement
 repopick -f 334344 # keystore: Block key attestation for SafetyNet
-cd framworks/base
-git cherry-pick 257c1b42a2df # PixelProps
-cd ../../
+repopick -f 349090 # AttestationHooks: Set shipping level to 32 for devices >=33
+repopick -f 353215 # Limit SafetyNet workarounds to unstable GMS process
+repopick -f 353216 # gmscompat: Apply the SafetyNet workaround to Play Store aswell
+repopick -f 353217 # gmscompat: Use Nexus 6P fingerprint for CTS/Integrity
+repopick -f 353218 # gmscompat: Make CTS/Play Integrity pass again
 
 # hardware/lineage/interfaces
 repopick 357349 # fastcharge: add super fast charge support
