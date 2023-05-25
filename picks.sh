@@ -31,6 +31,7 @@ repopick -f 334342 # Sorry bro: 6 -> 3
 repopick 340916 # SystemUI: add burnIn protection
 repopick -f 334343 # Alter model name to avoid SafetyNet HW attestation enforcement
 repopick -f 334344 # keystore: Block key attestation for SafetyNet
+git cherry-pick 257c1b42a2df # PixelProps
 
 # hardware/lineage/interfaces
 repopick 357349 # fastcharge: add super fast charge support
