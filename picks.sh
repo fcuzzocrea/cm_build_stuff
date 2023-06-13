@@ -52,6 +52,7 @@ repopick 357352 # Settings: add super fast charge toggle
 repopick -f 334348 # init: Set properties to make SafetyNet pass
 
 # vendor/lineage
+repopick 357968 # config: add super fast charge interface
 repopick -f 334345 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f 334346 # adb insecure by default
 
