@@ -38,6 +38,9 @@ repopick -f 353217 # gmscompat: Use Nexus 6P fingerprint for CTS/Integrity
 repopick -f 353218 # gmscompat: Make CTS/Play Integrity pass again
 repopick -f 357510 # gmscompat: also spoof props for samsung/sec apps
 
+# hardware/samsung_sli-linaro/graphics
+repopick 365082 # exynos990: update AVAILABLE_M2M_MPP_UNITS
+
 # hardware/lineage/interfaces
 repopick 357349 # fastcharge: add super fast charge support
 
