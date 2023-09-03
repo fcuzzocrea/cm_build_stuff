@@ -40,6 +40,7 @@ repopick -f 357510 # gmscompat: also spoof props for samsung/sec apps
 
 # hardware/samsung_sli-linaro/graphics
 repopick 365082 # exynos990: update AVAILABLE_M2M_MPP_UNITS
+repopick 365362 # libhwc2.1: libhwchelper: remove unsupported mappings
 
 # hardware/lineage/interfaces
 repopick 357349 # fastcharge: add super fast charge support
