@@ -36,11 +36,12 @@ repopick -f 353215 # Limit SafetyNet workarounds to unstable GMS process
 repopick -f 353216 # gmscompat: Apply the SafetyNet workaround to Play Store aswell
 repopick -f 353217 # gmscompat: Use Nexus 6P fingerprint for CTS/Integrity
 repopick -f 353218 # gmscompat: Make CTS/Play Integrity pass again
+repopick -f 373892 # gmscompat: Use new info
 repopick -f 357510 # gmscompat: also spoof props for samsung/sec apps
 
 # hardware/samsung_sli-linaro/graphics
-repopick 365082 # exynos990: update AVAILABLE_M2M_MPP_UNITS
-repopick 365362 # libhwc2.1: libhwchelper: remove unsupported mappings
+repopick 365082 -P hardware/samsung_slsi-linaro/graphics # exynos990: update AVAILABLE_M2M_MPP_UNITS
+repopick 365362 -P hardware/samsung_slsi-linaro/graphics # libhwc2.1: libhwchelper: remove unsupported mappings
 
 # hardware/lineage/interfaces
 repopick 357349 # fastcharge: add super fast charge support
