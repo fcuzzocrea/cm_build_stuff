@@ -89,11 +89,11 @@ repopick 368923 # Launcher3: Show clear all button in recents overview
 repopick 378936 # Revert "Support zero-state suggestions in Taskbar All Apps."
 
 # system/core
-repopick -f 334348 # init: Set properties to make SafetyNet pass
+repopick -f 374048 # init: Set properties to make SafetyNet pass
 
 # vendor/lineage
 repopick 381246 # overlay: Set action for the styles & wallpaper picker activity
-repopick 381293 # config: Build Glimpse
+# repopick 381293 # config: Build Glimpse
 
 # repopick 357968 # config: add super fast charge interface
 repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
