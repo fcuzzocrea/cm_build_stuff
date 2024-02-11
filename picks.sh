@@ -41,7 +41,23 @@ repopick -f -P frameworks/base 369792 # gmscompat: Make CTS/Play Integrity pass 
 repopick -f -P frameworks/base 374392 # gmscompat: Use new info
 repopick -f -P frameworks/base 357510 # gmscompat: also spoof props for samsung/sec apps
 
-# hardware/samsung_sli-linaro/graphics
+# hardware/samsung_slsi-linaro/configs
+repopick 382352 # configs: rename 990 to 9830
+repopick 382353 # exynos9830: update variables for T bsp
+
+# hardware/samsung_slsi-linaro/exynos
+repopick 381617 # kernel-*headers: Symlink videodev2 headers to linux/
+repopick 381618 # kernel-4.4-headers: videodev2_exynos_media: Add NV12M definitions
+repopick 381619 # libhwjpeg: Add backwards compatibility with older camera blobs
+
+# hardware/samsung_slsi-linaro/graphics
+repopick 381622 # graphics: Add exynos7885(/7904) configuration
+repopick 381623 # libhwjpeg: Add backwards compatibility with older camera blobs
+repopick 381624 # graphics: base: Import lib[g]scaler from Android 10 BSP sources
+repopick 382354 # exynos9830: update brightness paths
+repopick 382355 # exynos9830: switch to EXYNOS_SET_DISPLAY_MODE
+repopick 382356 # fixup! graphics: Support EXYNOS_SET_DISPLAY_MODE ioctl
+repopick 382357 # fixup! hwc3: Update HalImpl for T BSP
 
 # hardware/lineage/interfaces
 #repopick 357349 # fastcharge: add super fast charge support
@@ -67,6 +83,10 @@ repopick -p 382137 # Merge branch 'android14' of https://github.com/seedvault-ap
 # packages/apps/Settings
 repopick 381429 # Handle mobile data on internet page during setup
 #repopick 357352 # Settings: add super fast charge toggle
+
+# packages/apps/Trebuchet
+repopick 368923 # Launcher3: Show clear all button in recents overview
+repopick 378936 # Revert "Support zero-state suggestions in Taskbar All Apps."
 
 # system/core
 repopick -f 334348 # init: Set properties to make SafetyNet pass
