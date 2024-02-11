@@ -14,51 +14,69 @@ function checkchain() {
 
 source build/envsetup.sh
 
+repopick 382072 # repopick: Fix logic for skipping already merged changes
+
 # -------------- DEVICE STUFF --------------
 
 # device/samsung_slsi/sepolicy
-repopick 357508 # sepolicy: add policy for super fast charge
+# repopick 357508 # sepolicy: add policy for super fast charge
 
 # device/lineage/sepolicy
-repopick 357348 # sepolicy: add policy for super fast charge
+# repopick 357348 # sepolicy: add policy for super fast charge
 
 # -------------- PLATFORM STUFF --------------
 
 # build
-repopick -f 334342 # Sorry bro: 6 -> 3
+repopick -f 369796 # Sorry bro: 6 -> 3
 
 # frameworks/base
-repopick 340916 # SystemUI: add burnIn protection
-repopick -f 334343 # Alter model name to avoid SafetyNet HW attestation enforcement
-repopick -f 334344 # keystore: Block key attestation for SafetyNet
-repopick -f 349090 # AttestationHooks: Set shipping level to 32 for devices >=33
-repopick -f 353215 # Limit SafetyNet workarounds to unstable GMS process
-repopick -f 353216 # gmscompat: Apply the SafetyNet workaround to Play Store aswell
-repopick -f 353217 # gmscompat: Use Nexus 6P fingerprint for CTS/Integrity
-repopick -f 353218 # gmscompat: Make CTS/Play Integrity pass again
-repopick -f 373892 # gmscompat: Use new info
-repopick -f 357510 # gmscompat: also spoof props for samsung/sec apps
+# repopick 340916 # SystemUI: add burnIn protection
+repopick -f -P frameworks/base 369786 # Alter model name to avoid SafetyNet HW attestation enforcement
+repopick -f -P frameworks/base 369787 # keystore: Block key attestation for SafetyNet
+repopick -f -P frameworks/base 369788 # AttestationHooks: Set shipping level to 32 for devices >=33
+repopick -f -P frameworks/base 369789 # Limit SafetyNet workarounds to unstable GMS process
+repopick -f -P frameworks/base 369790 # gmscompat: Apply the SafetyNet workaround to Play Store aswell
+repopick -f -P frameworks/base 369791 # gmscompat: Use Nexus 6P fingerprint for CTS/Integrity
+repopick -f -P frameworks/base 369792 # gmscompat: Make CTS/Play Integrity pass again
+repopick -f -P frameworks/base 374392 # gmscompat: Use new info
+repopick -f -P frameworks/base 357510 # gmscompat: also spoof props for samsung/sec apps
 
 # hardware/samsung_sli-linaro/graphics
-repopick 365082 -P hardware/samsung_slsi-linaro/graphics # exynos990: update AVAILABLE_M2M_MPP_UNITS
-repopick 365362 -P hardware/samsung_slsi-linaro/graphics # libhwc2.1: libhwchelper: remove unsupported mappings
 
 # hardware/lineage/interfaces
-repopick 357349 # fastcharge: add super fast charge support
+#repopick 357349 # fastcharge: add super fast charge support
 
 # hardware/samsung
-repopick 357350 # fastcharge: move 1.0 impl to separate folder
-repopick 357351 # hidl: fastcharge: add 1.1 impl
+#repopick 357350 # fastcharge: move 1.0 impl to separate folder
+#repopick 357351 # hidl: fastcharge: add 1.1 impl
+
+# packages/apps/Dialer
+repopick 378813 # Dialer: InCallDialpad: Make light numbers visible
+repopick 378814 # Dialer: Fix Voicemail dialog's action button color
+repopick 381613 # Dialer: Update call end button colors
+
+# packages/apps/Etar
+repopick -p 382117 # Add link to manage notifications to settings
+
+# packages/apps/Glimps
+repopick 381899 # Glimpse: Drop trash confirmation dialogs
+
+# packages/apps/Seedvault
+repopick -p 382137 # Merge branch 'android14' of https://github.com/seedvault-app/seedvault
 
 # packages/apps/Settings
-repopick 357352 # Settings: add super fast charge toggle
+repopick 381429 # Handle mobile data on internet page during setup
+#repopick 357352 # Settings: add super fast charge toggle
 
 # system/core
 repopick -f 334348 # init: Set properties to make SafetyNet pass
 
 # vendor/lineage
-repopick 357968 # config: add super fast charge interface
-repopick -f 334345 # lineage: Disable privapp permission enforcement (make it log)
-repopick -f 334346 # adb insecure by default
+repopick 381246 # overlay: Set action for the styles & wallpaper picker activity
+repopick 381293 # config: Build Glimpse
+
+# repopick 357968 # config: add super fast charge interface
+repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
+repopick -f -P vendor/lineage 369795 # adb insecure by default
 
 exit 0
