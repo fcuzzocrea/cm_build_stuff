@@ -86,7 +86,6 @@ repopick 381429 # Handle mobile data on internet page during setup
 
 # packages/apps/Trebuchet
 repopick -f 368923 # Launcher3: Show clear all button in recents overview
-repopick -f 378936 # Revert "Support zero-state suggestions in Taskbar All Apps."
 
 # system/core
 repopick -f 374048 # init: Set properties to make SafetyNet pass
