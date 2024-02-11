@@ -85,8 +85,8 @@ repopick 381429 # Handle mobile data on internet page during setup
 #repopick 357352 # Settings: add super fast charge toggle
 
 # packages/apps/Trebuchet
-repopick 368923 # Launcher3: Show clear all button in recents overview
-repopick 378936 # Revert "Support zero-state suggestions in Taskbar All Apps."
+repopick -f 368923 # Launcher3: Show clear all button in recents overview
+repopick -f 378936 # Revert "Support zero-state suggestions in Taskbar All Apps."
 
 # system/core
 repopick -f 374048 # init: Set properties to make SafetyNet pass
