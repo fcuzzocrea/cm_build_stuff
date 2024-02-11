@@ -41,6 +41,9 @@ repopick -f -P frameworks/base 369792 # gmscompat: Make CTS/Play Integrity pass 
 repopick -f -P frameworks/base 374392 # gmscompat: Use new info
 repopick -f -P frameworks/base 357510 # gmscompat: also spoof props for samsung/sec apps
 
+#hardware/samsung
+repopick 380288 # doze: bump target SDK version
+
 # hardware/samsung_slsi-linaro/configs
 repopick 382352 # configs: rename 990 to 9830
 repopick 382353 # exynos9830: update variables for T bsp
