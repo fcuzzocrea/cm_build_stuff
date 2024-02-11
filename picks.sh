@@ -59,6 +59,9 @@ repopick 382355 # exynos9830: switch to EXYNOS_SET_DISPLAY_MODE
 repopick 382356 # fixup! graphics: Support EXYNOS_SET_DISPLAY_MODE ioctl
 repopick 382357 # fixup! hwc3: Update HalImpl for T BSP
 
+# hardware/samsung_slsi-linaro/interfaces
+repopick 382406 # interfaces: do not build libGeoTrans for 9830
+
 # hardware/lineage/interfaces
 #repopick 357349 # fastcharge: add super fast charge support
 
