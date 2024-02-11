@@ -75,7 +75,7 @@ repopick 381613 # Dialer: Update call end button colors
 repopick -p 382117 # Add link to manage notifications to settings
 
 # packages/apps/Glimps
-repopick 381899 # Glimpse: Drop trash confirmation dialogs
+# repopick 381899 # Glimpse: Drop trash confirmation dialogs
 
 # packages/apps/Seedvault
 repopick -p 382137 # Merge branch 'android14' of https://github.com/seedvault-app/seedvault
