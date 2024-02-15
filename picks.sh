@@ -47,7 +47,7 @@ repopick 380288 # doze: bump target SDK version
 # hardware/samsung_slsi-linaro/configs
 repopick 382352 # configs: rename 990 to 9830
 repopick 382353 # exynos9830: update variables for T bsp
-repopick 382436 # BoardConfig9830: Switch to Vulkan UI renderer
+# repopick 382436 # BoardConfig9830: Switch to Vulkan UI renderer
 
 # hardware/samsung_slsi-linaro/exynos
 repopick 381617 # kernel-*headers: Symlink videodev2 headers to linux/
@@ -72,16 +72,8 @@ repopick 382406 # interfaces: do not build libGeoTrans for 9830
 #repopick 357350 # fastcharge: move 1.0 impl to separate folder
 #repopick 357351 # hidl: fastcharge: add 1.1 impl
 
-# packages/apps/Dialer
-repopick 378813 # Dialer: InCallDialpad: Make light numbers visible
-repopick 378814 # Dialer: Fix Voicemail dialog's action button color
-repopick 381613 # Dialer: Update call end button colors
-
-# packages/apps/Etar
-repopick -p 382117 # Add link to manage notifications to settings
-
 # packages/apps/Glimps
-# repopick 381899 # Glimpse: Drop trash confirmation dialogs
+repopick 381899 # Glimpse: Drop trash confirmation dialogs
 
 # packages/apps/Seedvault
 repopick -p 382137 # Merge branch 'android14' of https://github.com/seedvault-app/seedvault
