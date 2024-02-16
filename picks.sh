@@ -14,8 +14,6 @@ function checkchain() {
 
 source build/envsetup.sh
 
-repopick 382072 # repopick: Fix logic for skipping already merged changes
-
 # -------------- DEVICE STUFF --------------
 
 # device/samsung_slsi/sepolicy
@@ -89,8 +87,6 @@ repopick -f 368923 # Launcher3: Show clear all button in recents overview
 repopick -f 374048 # init: Set properties to make SafetyNet pass
 
 # vendor/lineage
-repopick 381246 # overlay: Set action for the styles & wallpaper picker activity
-# repopick 381293 # config: Build Glimpse
 
 # repopick 357968 # config: add super fast charge interface
 repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
