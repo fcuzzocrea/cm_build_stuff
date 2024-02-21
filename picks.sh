@@ -29,7 +29,15 @@ repopick -f 369796 # Sorry bro: 6 -> 3
 
 # frameworks/base
 # repopick 340916 # SystemUI: add burnIn protection
-repopick -f -P frameworks/base 383057 #wm: Optimize window/transition animation scaling
+repopick 381475 # SystemUI: More notification icons on AOD screen
+repopick 383731 # usb: Show charging notification only if power brick is disconnected
+repopick 383573 # Allow signature spoofing for microG Companion/Services
+repopick 376856 # CarrierConfig: Always show APN settings on CDMA carriers
+repopick 376864 # CarrierConfig: allow toggling VoWiFi while roaming by default
+repopick 376857 # CarrierConfig: Always show ICCID
+repopick 376862 # Enable secondary user logout support by default
+# repopick 380205 # Enable backup service by default for all users
+repopick -f -P frameworks/base 383057 # wm: Optimize window/transition animation scaling
 repopick -f -P frameworks/base 369786 # Alter model name to avoid SafetyNet HW attestation enforcement
 repopick -f -P frameworks/base 369787 # keystore: Block key attestation for SafetyNet
 repopick -f -P frameworks/base 369788 # AttestationHooks: Set shipping level to 32 for devices >=33
@@ -42,6 +50,7 @@ repopick -f -P frameworks/base 357510 # gmscompat: also spoof props for samsung/
 
 #hardware/samsung
 repopick 380288 # doze: bump target SDK version
+repopick 383753 # aidl: fingerprint: Only call onEnrollmentsEnumerated when finished
 
 # hardware/samsung_slsi-linaro/configs
 repopick 382352 # configs: rename 990 to 9830
@@ -89,5 +98,7 @@ repopick -f 374048 # init: Set properties to make SafetyNet pass
 # repopick 357968 # config: add super fast charge interface
 repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f -P vendor/lineage 369795 # adb insecure by default
+
+repopick -t 14-screenrecord
 
 exit 0
