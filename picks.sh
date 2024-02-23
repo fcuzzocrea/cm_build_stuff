@@ -28,7 +28,7 @@ source build/envsetup.sh
 repopick -f 369796 # Sorry bro: 6 -> 3
 
 # frameworks/base
-# repopick 340916 # SystemUI: add burnIn protection
+repopick 383873 # SystemUI: add burnIn protection
 repopick 381475 # SystemUI: More notification icons on AOD screen
 repopick 383731 # usb: Show charging notification only if power brick is disconnected
 repopick 383573 # Allow signature spoofing for microG Companion/Services
@@ -98,7 +98,5 @@ repopick -f 374048 # init: Set properties to make SafetyNet pass
 # repopick 357968 # config: add super fast charge interface
 repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f -P vendor/lineage 369795 # adb insecure by default
-
-repopick -t 14-screenrecord
 
 exit 0
