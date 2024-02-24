@@ -29,14 +29,13 @@ repopick -f 369796 # Sorry bro: 6 -> 3
 
 # frameworks/base
 repopick 383873 # SystemUI: add burnIn protection
-repopick 381475 # SystemUI: More notification icons on AOD screen
 repopick 383731 # usb: Show charging notification only if power brick is disconnected
 repopick 383573 # Allow signature spoofing for microG Companion/Services
 repopick 376856 # CarrierConfig: Always show APN settings on CDMA carriers
 repopick 376864 # CarrierConfig: allow toggling VoWiFi while roaming by default
 repopick 376857 # CarrierConfig: Always show ICCID
 repopick 376862 # Enable secondary user logout support by default
-# repopick 380205 # Enable backup service by default for all users
+repopick -f -P frameworks/base 381475 # SystemUI: More notification icons on AOD screen
 repopick -f -P frameworks/base 383057 # wm: Optimize window/transition animation scaling
 repopick -f -P frameworks/base 369786 # Alter model name to avoid SafetyNet HW attestation enforcement
 repopick -f -P frameworks/base 369787 # keystore: Block key attestation for SafetyNet
@@ -49,29 +48,15 @@ repopick -f -P frameworks/base 374392 # gmscompat: Use new info
 repopick -f -P frameworks/base 357510 # gmscompat: also spoof props for samsung/sec apps
 
 #hardware/samsung
-repopick 380288 # doze: bump target SDK version
-repopick 383753 # aidl: fingerprint: Only call onEnrollmentsEnumerated when finished
 
 # hardware/samsung_slsi-linaro/configs
-repopick 382352 # configs: rename 990 to 9830
-repopick 382353 # exynos9830: update variables for T bsp
 repopick 382436 # BoardConfig9830: Switch to Vulkan UI renderer
 
 # hardware/samsung_slsi-linaro/exynos
-repopick 381617 # kernel-*headers: Symlink videodev2 headers to linux/
-repopick 381618 # kernel-4.4-headers: videodev2_exynos_media: Add NV12M definitions
-repopick 381619 # libhwjpeg: Add backwards compatibility with older camera blobs
 
 # hardware/samsung_slsi-linaro/graphics
-repopick 381623 # libhwjpeg: Add backwards compatibility with older camera blobs
-repopick 382354 # exynos9830: update brightness paths
-repopick 382355 # exynos9830: switch to EXYNOS_SET_DISPLAY_MODE
-repopick 382356 # fixup! graphics: Support EXYNOS_SET_DISPLAY_MODE ioctl
-repopick 382357 # fixup! hwc3: Update HalImpl for T BSP
-repopick 382435 # base: hwcomposer_property: move properties to system_ext
 
 # hardware/samsung_slsi-linaro/interfaces
-repopick 382406 # interfaces: do not build libGeoTrans for 9830
 
 # hardware/lineage/interfaces
 #repopick 357349 # fastcharge: add super fast charge support
