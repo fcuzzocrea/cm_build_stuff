@@ -55,6 +55,7 @@ repopick 382436 # BoardConfig9830: Switch to Vulkan UI renderer
 # hardware/samsung_slsi-linaro/exynos
 
 # hardware/samsung_slsi-linaro/graphics
+repoick 384848 # WIP: libhwc2.1: invalidate last frame before changing display mode
 
 # hardware/samsung_slsi-linaro/interfaces
 
