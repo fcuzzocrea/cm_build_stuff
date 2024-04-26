@@ -19,7 +19,6 @@ source build/envsetup.sh
 # device/samsung_slsi/sepolicy
 repopick 390379 # common: Allow apps to read cpu temperature
 repopick 390380 # common: Label usb gadget HAL
-repopick 390381 # common: Drop dtbo_block_device type
 repopick 390382 # sepolicy: Add policy for cass and vaultkeeperd
 repopick 390383 # common: Add policy for sehradiomanager
 repopick 390384 # common: Label AIDL RIL interfaces
@@ -36,24 +35,23 @@ repopick 390386 # common: Label HIDL RIL interfaces
 repopick -f 369796 # Sorry bro: 6 -> 3
 
 # frameworks/base
-repopick -f -P frameworks/base 385457 # base: Initial SenseProvider for FaceSense service
-repopick -f -P frameworks/base 385458 # SystemUI: Use simple check for isFaceDisabled
-repopick -f -P frameworks/base 385459 # SystemUI: Reset face auth on occluding app when authenticated
-repopick -f -P frameworks/base 385460 # WalletActivity: Don't explicity request face auth
-repopick -f -P frameworks/base 385461 # KeyguardBouncer: Don't delay showing if face auth running
-repopick -f -P frameworks/base 385462 # FaceSense: Vibrate on successful authentication
-repopick -f -P frameworks/base 385463 # SystemUI: Implement face unlock recognition animation and text
-repopick -f -P frameworks/base 385464 # SystemUI: Use proper tint for face unlock icon
-repopick -f -P frameworks/base 385465 # SystemUI: Implement bouncer face unlock animation
-repopick -f -P frameworks/base 385466 # SystemUI: Fix face unlock icon visibility when auth fails
-repopick -f -P frameworks/base 385467 # SystemUI: Avoid NullPointerException in setKeyguardMessage for face unlock message
-repopick -f -P frameworks/base 385468 # SystemUI: FaceUnlock: Add margin based on lock icon
-repopick -f -P frameworks/base 385489 # SystemUI: Enable pulsing animation for faceunlock
-repopick -f -P frameworks/base 385490 # SystemUI: Avoid showing face unlock animation on AOD and ambient screen
-repopick -f -P frameworks/base 385491 # SystemUI: Cleanup face unlock icon animation
-repopick -f -P frameworks/base 385492 # fixup! SystemUI: Show face icon in lockscreen if faceunlock is enabled
-repopick -f -P frameworks/base 385512 # BiometricScheduler: Cancel operation if not idle
-repopick -f -P frameworks/base 381475 # SystemUI: More notification icons on AOD screen
+# repopick -f -P frameworks/base 385457 # base: Initial SenseProvider for FaceSense service
+# repopick -f -P frameworks/base 385458 # SystemUI: Use simple check for isFaceDisabled
+# repopick -f -P frameworks/base 385459 # SystemUI: Reset face auth on occluding app when authenticated
+# repopick -f -P frameworks/base 385460 # WalletActivity: Don't explicity request face auth
+# repopick -f -P frameworks/base 385461 # KeyguardBouncer: Don't delay showing if face auth running
+# repopick -f -P frameworks/base 385462 # FaceSense: Vibrate on successful authentication
+# repopick -f -P frameworks/base 385463 # SystemUI: Implement face unlock recognition animation and text
+# repopick -f -P frameworks/base 385464 # SystemUI: Use proper tint for face unlock icon
+# repopick -f -P frameworks/base 385465 # SystemUI: Implement bouncer face unlock animation
+# repopick -f -P frameworks/base 385466 # SystemUI: Fix face unlock icon visibility when auth fails
+# repopick -f -P frameworks/base 385467 # SystemUI: Avoid NullPointerException in setKeyguardMessage for face unlock message
+# repopick -f -P frameworks/base 385468 # SystemUI: FaceUnlock: Add margin based on lock icon
+# repopick -f -P frameworks/base 385489 # SystemUI: Enable pulsing animation for faceunlock
+# repopick -f -P frameworks/base 385490 # SystemUI: Avoid showing face unlock animation on AOD and ambient screen
+# repopick -f -P frameworks/base 385491 # SystemUI: Cleanup face unlock icon animation
+# repopick -f -P frameworks/base 385492 # fixup! SystemUI: Show face icon in lockscreen if faceunlock is enabled
+# repopick -f -P frameworks/base 385512 # BiometricScheduler: Cancel operation if not idle
 repopick -f -P frameworks/base 383057 # wm: Optimize window/transition animation scaling
 repopick -f -P frameworks/base 385497 # Introduce PixelPropsUtils for safety net spoof [SQUASHED]
 repopick -f -P frameworks/base 385498 # PixelPropsUtils: Fix up compilation
@@ -117,8 +115,8 @@ repopick 390387 # ril: sehradiomanager: Restart when RILD died
 # repopick 357351 # hidl: fastcharge: add 1.1 impl
 
 # packages/apps/Settings
-repopick -f 385494 # Add Face Unlock with ParanoidSense
-repopick -f 385495 # Settings: Import missing Face Unlock animation
+# repopick -f 385494 # Add Face Unlock with ParanoidSense
+# repopick -f 385495 # Settings: Import missing Face Unlock animation
 # repopick 357352 # Settings: add super fast charge toggle
 
 # packages/apps/Trebuchet
@@ -133,7 +131,8 @@ repopick -f -P system/core 385505 # init: Spoof more props
 # repopick -f 374048 # init: Set properties to make SafetyNet pass
 
 # vendor/lineage
-repopick -f 385496 # faceunlock
+# repopick -f 385496 # faceunlock
+repopick -f -P frameworks/base 381475 # SystemUI: More notification icons on AOD screen
 repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f -P vendor/lineage 369795 # adb insecure by default
 
