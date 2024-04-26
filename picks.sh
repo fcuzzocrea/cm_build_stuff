@@ -24,6 +24,8 @@ repopick 390383 # common: Add policy for sehradiomanager
 repopick 390384 # common: Label AIDL RIL interfaces
 repopick 390385 # common: Allow sehradiomanager to find AIDL ISehRadioNetwork
 repopick 390386 # common: Label HIDL RIL interfaces
+repopick 391062 # common: add sepolicy for rebalance_interrupts daemon
+repopick 391063 # common: add sepolicy for slsi tetheroffload HAL
 # repopick 357508 # sepolicy: add policy for super fast charge
 
 # device/lineage/sepolicy
@@ -68,6 +70,7 @@ repopick -f -P frameworks/base 385500 # PixelPropsUtils: Update spoof packages
 # repopick -f -P frameworks/base 357510 # gmscompat: also spoof props for samsung/sec apps
 
 # hardware/samsung_slsi-linaro/configs
+repopick 391064 # BoardConfig9830: Enable BSP audio HAL for Exynos9830
 repopick 382436 # BoardConfig9830: Switch to Vulkan UI renderer
 
 # hardware/samsung_slsi-linaro/exynos
@@ -76,6 +79,32 @@ repopick 388286 # exynos: audiohal: Set usage and device for voip quad mic
 repopick 388287 # exynos: audiohal: Set device for camcorder quad mic
 repopick 388288 # exynos: audiohal: Add QUAD_MIC device and stream definition
 repopick 388289 # exynos: audiohal: When denying low latency capture ensure VOIP_TX flag is set
+repopick 391065 # exynos: audiohal_comv1: Re-import from Q BSP
+repopick 391066 # exynos: audiohal_comv1: Fix compile error
+repopick 391067 # exynos: audiohal_comv1: Add support for secril
+repopick 391068 # exynos: audiohal_comv1: Adapt secril for audiohal_comv1
+repopick 391069 # exynos: audiohal_comv1: Add missing device and stream definitions
+repopick 391070 # exynos: audiohal_comv1: Allow overriding low latency capture duration
+repopick 391071 # exynos: audiohal_comv1: Add QUAD_MIC device and stream definition
+repopick 391072 # exynos: audiohal_comv1: Adapt call usages
+repopick 391073 # exynos: audiohal_comv1: Add support for VOIP_TX input flag
+repopick 391074 # exynos: audiohal_comv1: Support BT_NREC_HEADSET_MIC
+repopick 391075 # exynos: audiohal_comv1: Import MMAP hardware volume control from T BSP
+repopick 391076 # exynos: audiohal_comv1: When denying low latency capture ensure VOIP_TX flag ...
+repopick 391077 # exynos: audiohal_comv1: Extend volume type with `VOLUME_TYPE_CALL_RX_MUTE`
+repopick 391078 # exynos: audiohal_comv1: Set device for camcorder quad mic
+repopick 391079 # exynos: audiohal_comv1: Also set proxy_call_status to true in communication mode
+repopick 391080 # exynos: audiohal_comv1: allow to override usb playback duration
+repopick 391081 # exynos: audiohal_comv1: Add listenback usage and stream definition
+repopick 391082 # exynos: audiohal_comv1: Add gaming speaker device and stream definitions
+repopick 391083 # exynos: audiohal_comv1: drop offload effect lib from audio hal
+repopick 391084 # exynos: Import sthal
+repopick 391085 # exynos: sthal: Allow specifying soundtrigger config path explicitly
+repopick 391086 # exynos: sthal: Allow overriding VTSDRV_MISC_MODEL_BIN_MAXSZ
+repopick 391087 # exynos: sthal: Update to latest source
+repopick 391088 # exynos: sthal: Import `sound_trigger_notify_ahal_record_status` from newer sthal
+repopick 391089 # exynos: audiohal_comv1: Import a2dp offload from T BSP
+repopick 391090 # exynos: audiohal_comv1: Fix compile error for a2dp offload
 
 # hardware/samsung_slsi-linaro/graphics
 repopick 388290 # hwc3: Add getOverlaySupport()
@@ -93,9 +122,15 @@ repopick 388301 # libhwc2.1: enable thread safety analysis
 repopick 388302 # libhwc2.1: enable thread safety analysis for libdrmresource
 repopick 388303 # hwc3: call present again if no changes after validate
 repopick 388304 # libhwc2.1: Address implicit capture of 'this' warnings
+repopick 391091 # exynos9830: Use size of product_layerAttributePriority[0] instead of uint32_t
 repopick 384848 # WIP: libhwc2.1: invalidate last frame before changing display mode
 
 # hardware/samsung_slsi-linaro/interfaces
+repopick 391092 # interfaces: Import tetheroffload
+repopick 391093 # interfaces: Import ExynosA2DPOffload
+repopick 391094 # interfaces: ExynosA2DPOffload: Configure Android.mk files
+repopick 391095 # interfaces: ExynosA2DPOffload: Allow specifying proxy path explicitly or
+repopick 391096 # interfaces: Import a2dp
 
 # hardware/lineage/interfaces
 # repopick 357349 # fastcharge: add super fast charge support
@@ -111,6 +146,9 @@ repopick 387917 # ril: sehradiomanager: Add support for a config file
 repopick 387918 # ril: sehradiomanager: Add support for AIDL sehradio
 repopick 387919 # aidl: ISehRadioNetworkIndication: Add missing function
 repopick 390387 # ril: sehradiomanager: Restart when RILD died
+repopick 391059 # rebalance_interrupts: one shot IRQ rebalancer
+repopick 391060 # [LSC] Add LOCAL_LICENSE_KINDS to hardware/samsung
+repopick 391061 # rebalance_interrupts: Change affinity ownership to system
 # repopick 357350 # fastcharge: move 1.0 impl to separate folder
 # repopick 357351 # hidl: fastcharge: add 1.1 impl
 
