@@ -17,14 +17,17 @@
   <project name="LineageOS/android_hardware_samsung_slsi-linaro_config" path="hardware/samsung_slsi-linaro/config" remote="github" revision="lineage-21"/>
 
   <!-- x1s -->
-  <project name="fcuzzocrea/android_device_samsung_universal9830-common" path="device/samsung/universal9830-common" remote="github-personal" revision="lineage-21"/>
-  <project name="fcuzzocrea/android_device_samsung_x1slte" path="device/samsung/x1slte" remote="github-personal" revision="lineage-21"/>
-  <project name="fcuzzocrea/android_kernel_samsung_universal9830" path="kernel/samsung/universal9830" remote="github-personal" revision="lineage-21"/>
-  <project name="fcuzzocrea/proprietary_vendor_samsung_universal9830-common" path="vendor/samsung/universal9830-common" remote="github-personal" revision="lineage-21"/>
-  <project name="fcuzzocrea/proprietary_vendor_samsung_x1slte" path="vendor/samsung/x1slte" remote="github-personal" revision="lineage-21"/>
+  <project name="fcuzzocrea/android_device_samsung_universal9830-common" path="device/samsung/universal9830-common" remote="github-personal" revision="lineage-21-qpr2"/>
+  <project name="fcuzzocrea/android_device_samsung_x1slte" path="device/samsung/x1slte" remote="github-personal" revision="lineage-21-qpr2"/>
+  <project name="fcuzzocrea/android_kernel_samsung_universal9830" path="kernel/samsung/universal9830" remote="github-personal" revision="lineage-21-qpr2"/>
+  <project name="fcuzzocrea/proprietary_vendor_samsung_universal9830-common" path="vendor/samsung/universal9830-common" remote="github-personal" revision="lineage-21-qpr2"/>
+  <project name="fcuzzocrea/proprietary_vendor_samsung_x1slte" path="vendor/samsung/x1slte" remote="github-personal" revision="lineage-21-qpr2"/>
 
   <!-- FaceUnlock -->
   <project name="syberia-project/platform_packages_apps_faceunlock" path="packages/apps/FaceUnlock" remote="gitlab" revision="14.0"/>
+
+  <!-- GMS -->
+  <project name="bosconovic/vendor_gms" path="vendor/gms" remote="gitlab" />
 
   <!-- Personal Stuff -->
   <project name="luk1337/ih8sn" path="external/ih8sn" revision="master" />
