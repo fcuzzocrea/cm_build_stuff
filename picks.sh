@@ -164,7 +164,6 @@ repopick -f 385496 # faceunlock
 repopick -f -P frameworks/base 381475 # SystemUI: More notification icons on AOD screen
 repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f -P vendor/lineage 369795 # adb insecure by default
-
 # repopick 357968 # config: add super fast charge interface
 
 exit 0

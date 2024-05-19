@@ -26,8 +26,8 @@
   <!-- FaceUnlock -->
   <project name="syberia-project/platform_packages_apps_faceunlock" path="packages/apps/FaceUnlock" remote="gitlab" revision="14.0"/>
 
-  <!-- GMS -->
-  <project name="bosconovic/vendor_gms" path="vendor/gms" remote="gitlab" />
+  <!-- GMS
+  <project name="bosconovic/vendor_gms" path="vendor/gms" remote="gitlab" />  -->
 
   <!-- Personal Stuff -->
   <project name="luk1337/ih8sn" path="external/ih8sn" revision="master" />
