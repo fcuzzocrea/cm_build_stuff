@@ -31,6 +31,11 @@ repopick 391063 # common: add sepolicy for slsi tetheroffload HAL
 # device/lineage/sepolicy
 # repopick 357348 # sepolicy: add policy for super fast charge
 
+# device/lineage/sm8250-common
+repopick 390712 # sm8250-common: Use new `wlan_mac.bin` symlink path for pipa
+repopick 390713 # sm8250-common: rootdir: Set permission for pcie wlan rx
+repopick 390714 # sm8250-common: sepolicy: Allow ueventd to read vendor_persist_wcnss_service_file
+
 # -------------- PLATFORM STUFF --------------
 
 # build
@@ -47,19 +52,9 @@ repopick -f -P frameworks/base 385497 # Introduce PixelPropsUtils for safety net
 repopick -f -P frameworks/base 385498 # PixelPropsUtils: Fix up compilation
 repopick -f -P frameworks/base 385499 # PixelPropsUtils: Update Spoof fingerprint (#1078)
 repopick -f -P frameworks/base 385500 # PixelPropsUtils: Update spoof packages
-# repopick -f -P frameworks/base 369786 # Alter model name to avoid SafetyNet HW attestation enforcement
-# repopick -f -P frameworks/base 369787 # keystore: Block key attestation for SafetyNet
-# repopick -f -P frameworks/base 369788 # AttestationHooks: Set shipping level to 32 for devices >=33
-# repopick -f -P frameworks/base 369789 # Limit SafetyNet workarounds to unstable GMS process
-# repopick -f -P frameworks/base 369790 # gmscompat: Apply the SafetyNet workaround to Play Store aswell
-# repopick -f -P frameworks/base 369791 # gmscompat: Use Nexus 6P fingerprint for CTS/Integrity
-# repopick -f -P frameworks/base 369792 # gmscompat: Make CTS/Play Integrity pass again
-# repopick -f -P frameworks/base 374392 # gmscompat: Use new info
-# repopick -f -P frameworks/base 357510 # gmscompat: also spoof props for samsung/sec apps
 
 # hardware/samsung_slsi-linaro/configs
 repopick 391064 # BoardConfig9830: Enable BSP audio HAL for Exynos9830
-repopick 382436 # BoardConfig9830: Switch to Vulkan UI renderer
 
 # hardware/samsung_slsi-linaro/exynos
 repopick 388285 # exynos: libaudio: Allow overriding low latency capture duration
@@ -157,7 +152,6 @@ repopick -f -P system/core 385502 # init: Weaken property override security for 
 repopick -f -P system/core 385503 # init: Add more properties to spoof.
 repopick -f -P system/core 385504 # init: init: Do not set safety net props for ENG builds
 repopick -f -P system/core 385505 # init: Spoof more props
-# repopick -f 374048 # init: Set properties to make SafetyNet pass
 
 # vendor/lineage
 repopick -f 385496 # faceunlock

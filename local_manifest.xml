@@ -15,7 +15,8 @@
   <project name="LineageOS/android_hardware_samsung_slsi-linaro_exynos5" path="hardware/samsung_slsi-linaro/exynos5" remote="github" revision="lineage-21"/>
   <project name="LineageOS/android_hardware_samsung_slsi-linaro_exynos" path="hardware/samsung_slsi-linaro/exynos" remote="github" revision="lineage-21"/>
   <project name="LineageOS/android_hardware_samsung_slsi-linaro_config" path="hardware/samsung_slsi-linaro/config" remote="github" revision="lineage-21"/>
-
+  <project name="LineageOS/android_hardware_samsung_slsi-linaro_interfaces" path="hardware/samsung_slsi-linaro/interfaces" remote="github" revision="lineage-21" />
+  
   <!-- x1s -->
   <project name="fcuzzocrea/android_device_samsung_universal9830-common" path="device/samsung/universal9830-common" remote="github-personal" revision="lineage-21-qpr2"/>
   <project name="fcuzzocrea/android_device_samsung_x1slte" path="device/samsung/x1slte" remote="github-personal" revision="lineage-21-qpr2"/>
@@ -23,11 +24,20 @@
   <project name="fcuzzocrea/proprietary_vendor_samsung_universal9830-common" path="vendor/samsung/universal9830-common" remote="github-personal" revision="lineage-21-qpr2"/>
   <project name="fcuzzocrea/proprietary_vendor_samsung_x1slte" path="vendor/samsung/x1slte" remote="github-personal" revision="lineage-21-qpr2"/>
 
+  <!-- pipa -->
+  <project name="fcuzzocrea/android_device_xiaomi_pipa" path="device/xiaomi/pipa" remote="github-personal" revision="lineage-21" />
+  <project name="fcuzzocrea/android_device_xiaomi_sm8250-common" path="device/xiaomi/sm8250-common" remote="github-personal" revision="lineage-21" />
+  <project name="fcuzzocrea/android_hardware_xiaomi" path="hardware/xiaomi" remote="github-personal" revision="lineage-21" />
+  <project name="fcuzzocrea/android_kernel_xiaomi_sm8250" path="kernel/xiaomi/sm8250" remote="github-personal" revision="lineage-21" />
+  <project name="fcuzzocrea/proprietary_vendor_xiaomi_pipa" path="device/xiaomi/pipa" remote="github-personal" revision="lineage-21" />
+  <project name="LineageOS/proprietary_vendor_xiaomi_sm8250-common" path="vendor/xiaomi/sm8250-common" remote="github" revision="lineage-21" />
+
   <!-- FaceUnlock -->
   <project name="bosconovic/platform_packages_apps_faceunlock" path="packages/apps/FaceUnlock" remote="gitlab" />
 
-  <!-- GMS
-  <project name="bosconovic/vendor_gms" path="vendor/gms" remote="gitlab" />  -->
+  <!-- Pixel Stuff -->
+  <project name="fcuzzocrea/android_vendor_google_pixel" path="vendor/google/pixel" remote="github-personal"/>
+  <project name="fcuzzocrea/android_vendor_lineage_prebuilt_pixel" path="vendor/linage/prebuilt/pixel" remote="github-personal"/>
 
   <!-- Personal Stuff -->
   <project name="luk1337/ih8sn" path="external/ih8sn" revision="master" />
