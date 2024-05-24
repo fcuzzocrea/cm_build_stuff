@@ -48,10 +48,15 @@ repopick -f -P frameworks/base 385464 # SystemUI: Use proper tint for face unloc
 repopick -f -P frameworks/base 391097 # SystemUI: biometrics: Follow user setting to confirm face unlock
 repopick -f -P frameworks/base 385512 # BiometricScheduler: Cancel operation if not idle
 repopick -f -P frameworks/base 388204 # base: Add three-fingers-swipe to screenshot [1/2]
-repopick -f -P frameworks/base 385497 # Introduce PixelPropsUtils for safety net spoof [SQUASHED]
-repopick -f -P frameworks/base 385498 # PixelPropsUtils: Fix up compilation
-repopick -f -P frameworks/base 385499 # PixelPropsUtils: Update Spoof fingerprint (#1078)
-repopick -f -P frameworks/base 385500 # PixelPropsUtils: Update spoof packages
+repopick -f -P frameworks/base 369786 # Alter model name to avoid SafetyNet HW attestation enforcement
+repopick -f -P frameworks/base 369787 # keystore: Block key attestation for SafetyNet
+repopick -f -P frameworks/base 369788 # AttestationHooks: Set shipping level to 32 for devices >=33
+repopick -f -P frameworks/base 369789 # Limit SafetyNet workarounds to unstable GMS process
+repopick -f -P frameworks/base 369790 # gmscompat: Apply the SafetyNet workaround to Play Store aswell
+repopick -f -P frameworks/base 369791 # gmscompat: Use Nexus 6P fingerprint for CTS/Integrity
+repopick -f -P frameworks/base 369792 # gmscompat: Make CTS/Play Integrity pass again
+repopick -f -P frameworks/base 374392 # gmscompat: Use new info
+repopick -f -P frameworks/base 357510 # gmscompat: also spoof props for samsung/sec apps
 
 # hardware/samsung_slsi-linaro/configs
 repopick 391064 # BoardConfig9830: Enable BSP audio HAL for Exynos9830
@@ -147,15 +152,10 @@ repopick -f 391308 # Settings: Add three-fingers-swipe to screenshot [2/2]
 repopick -f 368923 # Launcher3: Show clear all button in recents overview
 
 # system/core
-repopick -f -P system/core 385501 # init: Set properties to make SafetyNet pass
-repopick -f -P system/core 385502 # init: Weaken property override security for the init extension
-repopick -f -P system/core 385503 # init: Add more properties to spoof.
-repopick -f -P system/core 385504 # init: init: Do not set safety net props for ENG builds
-repopick -f -P system/core 385505 # init: Spoof more props
 
 # vendor/lineage
 repopick -f 385496 # faceunlock
-repopick -f -P frameworks/base 381475 # SystemUI: More notification icons on AOD screen
+repopick -f -P vendor/lineage 381475 # SystemUI: More notification icons on AOD screen
 repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f -P vendor/lineage 369795 # adb insecure by default
 # repopick 357968 # config: add super fast charge interface

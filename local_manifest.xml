@@ -29,15 +29,14 @@
   <project name="fcuzzocrea/android_device_xiaomi_sm8250-common" path="device/xiaomi/sm8250-common" remote="github-personal" revision="lineage-21" />
   <project name="fcuzzocrea/android_hardware_xiaomi" path="hardware/xiaomi" remote="github-personal" revision="lineage-21" />
   <project name="fcuzzocrea/android_kernel_xiaomi_sm8250" path="kernel/xiaomi/sm8250" remote="github-personal" revision="lineage-21" />
-  <project name="fcuzzocrea/proprietary_vendor_xiaomi_pipa" path="device/xiaomi/pipa" remote="github-personal" revision="lineage-21" />
+  <project name="fcuzzocrea/proprietary_vendor_xiaomi_pipa" path="vendor/xiaomi/pipa" remote="github-personal" revision="lineage-21" />
   <project name="LineageOS/proprietary_vendor_xiaomi_sm8250-common" path="vendor/xiaomi/sm8250-common" remote="github" revision="lineage-21" />
 
   <!-- FaceUnlock -->
   <project name="bosconovic/platform_packages_apps_faceunlock" path="packages/apps/FaceUnlock" remote="gitlab" />
 
   <!-- Pixel Stuff -->
-  <project name="fcuzzocrea/android_vendor_google_pixel" path="vendor/google/pixel" remote="github-personal"/>
-  <project name="fcuzzocrea/android_vendor_lineage_prebuilt_pixel" path="vendor/linage/prebuilt/pixel" remote="github-personal"/>
+  <project name="bosconovic/android_vendor_google_pixel" path="vendor/google_pixel" remote="gitlab"/>
 
   <!-- Personal Stuff -->
   <project name="luk1337/ih8sn" path="external/ih8sn" revision="master" />
