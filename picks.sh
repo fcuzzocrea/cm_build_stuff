@@ -148,13 +148,8 @@ repopick -f 385495 # Settings: Import missing Face Unlock animation
 repopick -f 391308 # Settings: Add three-fingers-swipe to screenshot [2/2]
 # repopick 357352 # Settings: add super fast charge toggle
 
-# packages/apps/Trebuchet
-repopick -f 368923 # Launcher3: Show clear all button in recents overview
-
-# system/core
-
 # vendor/lineage
-repopick -f 385496 # faceunlock
+repopick -f -P vendor/lineage 385496 # faceunlock
 repopick -f -P vendor/lineage 381475 # SystemUI: More notification icons on AOD screen
 repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f -P vendor/lineage 369795 # adb insecure by default
