@@ -31,7 +31,7 @@ repopick 398045 # sm8250-common: sepolicy: Label wakeup nodes from pipa
 # -------------- PLATFORM STUFF --------------
 
 # bootable/recovery
-repopick 398047 # hack: use drm atomic from caf
+repopick -f -P bootable/recovery 398047 # hack: use drm atomic from caf
 
 # build
 repopick -f 369796 # Sorry bro: 6 -> 3
