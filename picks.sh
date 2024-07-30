@@ -23,15 +23,20 @@ source build/envsetup.sh
 # repopick 357348 # sepolicy: add policy for super fast charge
 
 # device/xiaomi/sm8250-common
-repopick 398044 # sm8250-common: decommonize firmware_wlan_mac.bin_symlink
 repopick 390713 # sm8250-common: rootdir: Set permission for pcie wlan rx
 repopick 390714 # sm8250-common: sepolicy: Allow ueventd to read vendor_persist_wcnss_service_file
 repopick 398045 # sm8250-common: sepolicy: Label wakeup nodes from pipa
 
+# device/xiaomi/pipa
+checkchain 376508 376509 376510 376513 376519 376520 376524 376525 376527 376529 376530 388725 398051
+
+# kernel/xiaomi/sm8250
+checkchain 388683
+
 # -------------- PLATFORM STUFF --------------
 
 # bootable/recovery
-repopick -f -P bootable/recovery 398047 # hack: use drm atomic from caf
+repopick 398771 # minui: Import graphics_drm fix from QSSI 13
 
 # build
 repopick -f 369796 # Sorry bro: 6 -> 3
@@ -42,7 +47,7 @@ repopick -f -P frameworks/base 385463 # SystemUI: Implement face unlock recognit
 repopick -f -P frameworks/base 385464 # SystemUI: Use proper tint for face unlock icon
 repopick -f -P frameworks/base 391097 # SystemUI: biometrics: Follow user setting to confirm face unlock
 repopick -f -P frameworks/base 385512 # BiometricScheduler: Cancel operation if not idle
-repopick -f -P frameworks/base 388204 # base: Add three-fingers-swipe to screenshot [1/2]
+#repopick -f -P frameworks/base 388204 # base: Add three-fingers-swipe to screenshot [1/2]
 repopick -f -P frameworks/base 369786 # Alter model name to avoid SafetyNet HW attestation enforcement
 repopick -f -P frameworks/base 369787 # keystore: Block key attestation for SafetyNet
 repopick -f -P frameworks/base 369788 # AttestationHooks: Set shipping level to 32 for devices >=33
