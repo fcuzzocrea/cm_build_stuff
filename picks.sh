@@ -28,10 +28,10 @@ repopick 390714 # sm8250-common: sepolicy: Allow ueventd to read vendor_persist_
 repopick 398045 # sm8250-common: sepolicy: Label wakeup nodes from pipa
 
 # device/xiaomi/pipa
-checkchain 376508 376509 376510 376513 376519 376520 376524 376525 376527 376529 376530 388725 398051
+repopick 376507 376508 376509 376510 376513 376519 376520 376524 376525 376527 376529 376530 388725 398051
 
 # kernel/xiaomi/sm8250
-checkchain 388683
+checkchain kernel/xiaomi/sm8250 refs/changes/83/388683/4
 
 # -------------- PLATFORM STUFF --------------
 
