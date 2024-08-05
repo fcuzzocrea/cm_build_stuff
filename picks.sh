@@ -47,7 +47,9 @@ repopick -f -P frameworks/base 385463 # SystemUI: Implement face unlock recognit
 repopick -f -P frameworks/base 385464 # SystemUI: Use proper tint for face unlock icon
 repopick -f -P frameworks/base 391097 # SystemUI: biometrics: Follow user setting to confirm face unlock
 repopick -f -P frameworks/base 385512 # BiometricScheduler: Cancel operation if not idle
-#repopick -f -P frameworks/base 388204 # base: Add three-fingers-swipe to screenshot [1/2]
+repopick -f -P frameworks/base 397585 # base: Add three-fingers-swipe to screenshot [1/2]
+repopick -f -P frameworks/base 397586 # Improvements for swipe to screenshot
+repopick -f -P frameworks/base 397587 # SwipeToScreenshot: Import MIUI implementation
 repopick -f -P frameworks/base 369786 # Alter model name to avoid SafetyNet HW attestation enforcement
 repopick -f -P frameworks/base 369787 # keystore: Block key attestation for SafetyNet
 repopick -f -P frameworks/base 369788 # AttestationHooks: Set shipping level to 32 for devices >=33
