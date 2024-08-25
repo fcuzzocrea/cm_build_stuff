@@ -85,6 +85,9 @@ repopick -f 385495 # Settings: Import missing Face Unlock animation
 repopick -f 391308 # Settings: Add three-fingers-swipe to screenshot [2/2]
 # repopick 357352 # Settings: add super fast charge toggle
 
+# packages/overlays/Lineage
+repopick -f 400129 # lineage: Moar fontz
+
 # vendor/lineage
 repopick -f -P vendor/lineage 385496 # faceunlock
 repopick -f -P vendor/lineage 381475 # SystemUI: More notification icons on AOD screen
