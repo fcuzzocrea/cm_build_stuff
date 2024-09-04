@@ -66,6 +66,9 @@ repopick -f -P frameworks/base 357510 # gmscompat: also spoof props for samsung/
 # hardware/samsung_slsi-linaro/configs
 
 # hardware/samsung_slsi-linaro/exynos
+repopick 399491 # audiohal_comv1: return BT SCO device when an actual BT SCO device is used
+repopick 399492 # exynos: audiohal_comv1: Always allow to reconfigure stream if voice  recognition is active
+repopick 399493 # exynos: audiohal_comv1: Ensure AUDIO_INPUT_FLAG_FAST is set when using low latency capture samplerate during calls
 
 # hardware/samsung_slsi-linaro/graphics
 repopick 384848 # WIP: libhwc2.1: invalidate last frame before changing display mode
@@ -93,8 +96,8 @@ repopick -f -P vendor/lineage 385496 # faceunlock
 repopick -f -P vendor/lineage 381475 # SystemUI: More notification icons on AOD screen
 repopick -f -P vendor/lineage 369794 # lineage: Disable privapp permission enforcement (make it log)
 repopick -f -P vendor/lineage 369795 # adb insecure by default
-repopick -f -P vendor/lineage 400178 # lineage: more clocks
-repopick -f -P vendor/lineage 400184 # lineage: disable now playing and live translate
+#repopick -f -P vendor/lineage 400178 # lineage: more clocks
+#repopick -f -P vendor/lineage 400184 # lineage: disable now playing and live translate
 # repopick 357968 # config: add super fast charge interface
 
 exit 0
